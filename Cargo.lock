@@ -834,6 +834,7 @@ dependencies = [
  "p256",
  "prost",
  "prost-build",
+ "prost-types",
  "reqwest",
  "serde",
  "serde_json",

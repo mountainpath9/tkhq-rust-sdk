@@ -1,6 +1,7 @@
 use std::collections::HashMap;
 
 use super::*;
+use gen::services::coordinator::public::v1::GetWalletsResponse;
 
 #[tokio::test]
 async fn test_new() {
@@ -18,5 +19,5 @@ async fn test_new() {
         body: Some(body),
         substitution: None,
     };
-    let resp: api::GetWalletsResponse = tk.request(req).await.unwrap();
+    let resp: GetWalletsResponse = tk.request(req).await.unwrap();
 }
