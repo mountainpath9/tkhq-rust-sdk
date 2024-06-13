@@ -1177,6 +1177,7 @@ dependencies = [
  "dotenv",
  "env_logger",
  "hex",
+ "log",
  "p256",
  "pbjson",
  "pbjson-build",

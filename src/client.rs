@@ -11,6 +11,7 @@ use reqwest::Client;
 use serde::{de::DeserializeOwned, Serialize};
 use serde_json::Value;
 use std::env;
+use std::time::{SystemTime, UNIX_EPOCH};
 
 #[derive(Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -89,6 +90,15 @@ impl Turnkey {
         Ok(resp)
     }
 
+    pub fn request_timestamp_ms(&self) -> String {
+        let start = SystemTime::now();
+        let ts = start
+            .duration_since(UNIX_EPOCH)
+            .expect("Time went backwards");
+        let ts = ts.as_millis();
+        return ts.to_string();
+    }
+
     fn stamp(&self, stamp_input: StampInput) -> TurnkeyResult<String> {
         let private_key_bytes = hex::decode(stamp_input.private_key_hex)
             .map_err(|e| TurnkeyError::StampError(StampError::InvalidPrivateKeyString(e)))?;
@@ -124,7 +134,7 @@ impl Turnkey {
             .seal_and_stamp_request_body(sealed_request_input)
             .await?;
 
-        let response = self
+        let request = self
             .client
             .post(&url)
             .headers({
@@ -136,8 +146,19 @@ impl Turnkey {
                 }
                 headers
             })
-            .body(sealed_request_output.sealed_body)
-            .send()
+            .body(sealed_request_output.sealed_body.clone())
+            .build()
+            .map_err(TurnkeyError::HttpError)?;
+
+        log::debug!(
+            "sending turnkey post request, url: {}, body: {}",
+            request.url(),
+            sealed_request_output.sealed_body
+        );
+
+        let response = self
+            .client
+            .execute(request)
             .await
             .map_err(TurnkeyError::HttpError)?;
 
@@ -146,10 +167,14 @@ impl Turnkey {
                 Ok(parsed) => Ok(parsed),
                 Err(e) => Err(TurnkeyError::OtherError(e.to_string())),
             },
-            other => Err(TurnkeyError::OtherError(format!(
-                "Received status code: {}",
-                other
-            ))),
+            other => {
+                let body = response.text().await.map_err(TurnkeyError::HttpError)?;
+                log::debug!("error status: {}, body: {}", other, body);
+                Err(TurnkeyError::OtherError(format!(
+                    "Received status code: {}",
+                    other
+                )))
+            }
         }
     }
 
@@ -240,6 +265,13 @@ declare_rpc!(
     "/public/v1/query/get_wallet_accounts",
     api::GetWalletAccountsRequest,
     api::GetWalletAccountsResponse
+);
+
+declare_rpc!(
+    CreateSubOrganisation,
+    "/public/v1/submit/create_sub_organization",
+    activity::CreateSubOrganizationRequest,
+    api::ActivityResponse
 );
 
 declare_rpc!(

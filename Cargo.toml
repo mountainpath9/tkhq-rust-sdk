@@ -25,6 +25,7 @@ reqwest = { version = "0.12.4", features=["json"]}
 pbjson-build = "0.6.2"
 pbjson-types = "0.6.0"
 pbjson = "0.6.0"
+log = "0.4.21"
 
 [features]
 build_deps = ["prost-build"]
