@@ -25,3 +25,6 @@ dotenv = "0.15.0"
 
 [features]
 build_deps = ["prost-build"]
+
+[dev-dependencies]
+tokio = { version = "1.38.0", features = ["full"] }
