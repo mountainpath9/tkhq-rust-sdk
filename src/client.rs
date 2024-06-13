@@ -1,4 +1,5 @@
 use crate::errors::{StampError, TurnkeyError};
+use crate::gen::external::activity::v1 as activity;
 use crate::gen::services::coordinator::public::v1 as api;
 use base64::prelude::BASE64_URL_SAFE_NO_PAD;
 use base64::Engine;
@@ -191,13 +192,101 @@ pub trait TurnkeyRpc {
     type Response;
 }
 
-pub struct GetWallets {}
+macro_rules! declare_rpc {
+    ($name:ident, $path:literal, $req:ty, $resp:ty) => {
+        pub struct $name {}
 
-impl TurnkeyRpc for GetWallets {
-    fn uri() -> String {
-        "/public/v1/query/list_wallets".to_owned()
-    }
+        impl TurnkeyRpc for $name {
+            fn uri() -> String {
+                $path.to_owned()
+            }
 
-    type Request = api::GetWalletsRequest;
-    type Response = api::GetWalletsResponse;
+            type Request = $req;
+            type Response = $resp;
+        }
+    };
 }
+
+declare_rpc!(
+    CreateWallet,
+    "/public/v1/submit/create_wallet",
+    activity::CreateWalletRequest,
+    api::ActivityResponse
+);
+
+declare_rpc!(
+    GetWallets,
+    "/public/v1/query/list_wallets",
+    api::GetWalletsRequest,
+    api::GetWalletsResponse
+);
+
+declare_rpc!(
+    GetWallet,
+    "/public/v1/query/get_wallet",
+    api::GetWalletRequest,
+    api::GetWalletResponse
+);
+
+declare_rpc!(
+    CreateWalletAccounts,
+    "/public/v1/submit/create_wallet_accounts",
+    activity::CreateWalletAccountsRequest,
+    api::ActivityResponse
+);
+
+declare_rpc!(
+    GetWalletAccounts,
+    "/public/v1/query/get_wallet_accounts",
+    api::GetWalletAccountsRequest,
+    api::GetWalletAccountsResponse
+);
+
+declare_rpc!(
+    SignRawPayload,
+    "/public/v1/submit/sign_raw_payload",
+    activity::SignRawPayloadRequest,
+    api::ActivityResponse
+);
+
+declare_rpc!(
+    SignRawPayloads,
+    "/public/v1/submit/sign_raw_payloads",
+    activity::SignRawPayloadsRequest,
+    api::ActivityResponse
+);
+
+declare_rpc!(
+    SignTransaction,
+    "/public/v1/submit/sign_transaction",
+    activity::SignTransactionRequest,
+    api::ActivityResponse
+);
+
+declare_rpc!(
+    GetActivity,
+    "/public/v1/query/get_activity",
+    api::GetActivityRequest,
+    api::ActivityResponse
+);
+
+declare_rpc!(
+    GetActivities,
+    "/public/v1/query/list_activities",
+    api::GetActivitiesRequest,
+    api::GetActivitiesResponse
+);
+
+declare_rpc!(
+    ApproveActivity,
+    "/public/v1/submit/approve_activity",
+    activity::ApproveActivityRequest,
+    api::ActivityResponse
+);
+
+declare_rpc!(
+    RejectActivity,
+    "/public/v1/submit/reject_activity",
+    activity::RejectActivityRequest,
+    api::ActivityResponse
+);
