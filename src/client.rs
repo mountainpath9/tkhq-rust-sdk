@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 use crate::errors::{StampError, TurnkeyError};
 use crate::gen::services::coordinator::public::v1 as api;
 use base64::prelude::BASE64_URL_SAFE_NO_PAD;
@@ -22,31 +20,21 @@ struct ApiStamp {
 }
 
 #[derive(Debug)]
-pub struct StampInput<'a> {
+struct StampInput<'a> {
     sealed_body: &'a str,
     public_key_hex: String,
     private_key_hex: String,
 }
 
 #[derive(Debug)]
-pub struct SealedRequestInput {
+struct SealedRequestInput {
     pub body: Value,
     pub public_key_hex: Option<String>,
     pub private_key_hex: Option<String>,
 }
 
 #[derive(Debug)]
-pub struct RequestInput {
-    pub uri: String,
-    pub method: String,
-    pub headers: Option<HeadersShape>,
-    pub query: Option<QueryShape>,
-    pub body: Option<BodyShape>,
-    pub substitution: Option<SubstitutionShape>,
-}
-
-#[derive(Debug)]
-pub struct SealedRequestOutput {
+struct SealedRequestOutput {
     pub sealed_body: String,
     pub x_stamp: String,
 }
@@ -62,16 +50,6 @@ pub struct Turnkey {
     client: Client,
 }
 
-#[derive(Debug)]
-pub enum QueryValueShape {
-    Single(String),
-    Array(Vec<String>),
-}
-
-pub type HeadersShape = HashMap<String, String>;
-pub type BodyShape = Value;
-pub type QueryShape = HashMap<String, QueryValueShape>;
-pub type SubstitutionShape = HashMap<String, String>;
 pub type TurnkeyResult<T> = std::result::Result<T, TurnkeyError>;
 
 impl Turnkey {
@@ -99,7 +77,18 @@ impl Turnkey {
         })
     }
 
-    pub fn stamp(&self, stamp_input: StampInput) -> TurnkeyResult<String> {
+    pub async fn request<RPC>(&self, request_input: RPC::Request) -> TurnkeyResult<RPC::Response>
+    where
+        RPC: TurnkeyRpc,
+        RPC::Request: Serialize,
+        RPC::Response: DeserializeOwned,
+    {
+        let body = serde_json::to_value(request_input).expect("serilization to succeed");
+        let resp = self.raw_request(RPC::uri(), body).await?;
+        Ok(resp)
+    }
+
+    fn stamp(&self, stamp_input: StampInput) -> TurnkeyResult<String> {
         let private_key_bytes = hex::decode(stamp_input.private_key_hex)
             .map_err(|e| TurnkeyError::StampError(StampError::InvalidPrivateKeyString(e)))?;
 
@@ -119,91 +108,14 @@ impl Turnkey {
         Ok(BASE64_URL_SAFE_NO_PAD.encode(json_stamp.as_bytes()))
     }
 
-    fn substitute_path(uri: String, substitution: SubstitutionShape) -> TurnkeyResult<String> {
-        let mut res = uri;
-        for (key, val) in &substitution {
-            let sub = format!("{{{}}}", key);
-            let subbed_str = res.replace(&sub, val);
-            if subbed_str == res {
-                return Err(TurnkeyError::OtherError(
-                    "Substitution key was not found.".to_string(),
-                ));
-            }
-            res = subbed_str;
-        }
-
-        // TODO May be a better way to handle this, but {} are not valid uri chars
-        if res.contains('{') && res.contains('}') {
-            return Err(TurnkeyError::OtherError(
-                "Did not substitute all keys.".to_string(),
-            ));
-        }
-        Ok(res)
-    }
-    pub fn construct_url(
-        &self,
-        uri: String,
-        query: QueryShape,
-        substitution: SubstitutionShape,
-    ) -> TurnkeyResult<String> {
-        let path = Turnkey::substitute_path(uri, substitution)?;
-        // TODO: Might need to check if path starts with "/", not sure how its called
-        let mut url = format!("{}{}", self.base_url, path);
-
-        // TODO: This can all be cleaned up/simplified with Url crate if needed
-        if !query.is_empty() {
-            url = format!("{}?", url);
-        }
-        for (key, val) in query.iter() {
-            match val {
-                QueryValueShape::Single(item) => {
-                    url = format!("{}&{}={}", url, key, item);
-                }
-                QueryValueShape::Array(items) => {
-                    for item in items {
-                        url = format!("{}&{}={}", url, key, item);
-                    }
-                }
-            }
-        }
-        Ok(url)
-    }
-
-    pub async fn request<RPC>(&self, request_input: RPC::Request) -> TurnkeyResult<RPC::Response>
+    async fn raw_request<O>(&self, uri: String, body: Value) -> TurnkeyResult<O>
     where
-        RPC: TurnkeyRpc,
-        RPC::Request: Serialize,
-        RPC::Response: DeserializeOwned,
+        O: DeserializeOwned,
     {
-        let body = serde_json::to_value(request_input).expect("serilization to succeed");
-        let rinput = RequestInput {
-            uri: RPC::uri(),
-            method: "POST".to_owned(),
-            headers: None,
-            query: None,
-            body: Some(body),
-            substitution: None,
-        };
-        let resp = self.raw_request(rinput).await?;
-        Ok(resp)
-    }
-
-    async fn raw_request<ResponseData>(
-        &self,
-        request_input: RequestInput,
-    ) -> TurnkeyResult<ResponseData>
-    where
-        ResponseData: DeserializeOwned,
-    {
-        // TODO: unwrap_or_default correct here? or make construct_url take in an Option
-        let url = self.construct_url(
-            request_input.uri,
-            request_input.query.unwrap_or_default(),
-            request_input.substitution.unwrap_or_default(),
-        )?;
+        let url = format!("{}{}", self.base_url, uri);
 
         let sealed_request_input = SealedRequestInput {
-            body: request_input.body.unwrap_or_default(),
+            body,
             public_key_hex: None,
             private_key_hex: None,
         };
@@ -221,17 +133,7 @@ impl Turnkey {
                 {
                     headers.insert("X-Stamp", x_stamp_header);
                 }
-                match request_input.headers {
-                    Some(input_headers) => {
-                        for (_, value) in input_headers.iter() {
-                            if let Ok(val_header) = HeaderValue::try_from(value) {
-                                headers.insert("test keyname", val_header);
-                            }
-                        }
-                        headers
-                    }
-                    None => headers,
-                }
+                headers
             })
             .body(sealed_request_output.sealed_body)
             .send()
@@ -239,7 +141,7 @@ impl Turnkey {
             .map_err(TurnkeyError::HttpError)?;
 
         match response.status() {
-            reqwest::StatusCode::OK => match response.json::<ResponseData>().await {
+            reqwest::StatusCode::OK => match response.json::<O>().await {
                 Ok(parsed) => Ok(parsed),
                 Err(e) => Err(TurnkeyError::OtherError(e.to_string())),
             },
@@ -250,7 +152,7 @@ impl Turnkey {
         }
     }
 
-    pub async fn seal_and_stamp_request_body(
+    async fn seal_and_stamp_request_body(
         &self,
         input: SealedRequestInput,
     ) -> TurnkeyResult<SealedRequestOutput> {
