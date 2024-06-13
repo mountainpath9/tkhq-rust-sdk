@@ -6,20 +6,20 @@ impl serde::Serialize for AcceptInvitationIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.invitation_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.authenticator.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.AcceptInvitationIntent", len)?;
-        if !self.invitation_id.is_empty() {
+        if true {
             struct_ser.serialize_field("invitationId", &self.invitation_id)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         if let Some(v) = self.authenticator.as_ref() {
@@ -133,20 +133,20 @@ impl serde::Serialize for AcceptInvitationIntentV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.invitation_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.authenticator.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.AcceptInvitationIntentV2", len)?;
-        if !self.invitation_id.is_empty() {
+        if true {
             struct_ser.serialize_field("invitationId", &self.invitation_id)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         if let Some(v) = self.authenticator.as_ref() {
@@ -260,17 +260,17 @@ impl serde::Serialize for AcceptInvitationResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.invitation_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.AcceptInvitationResult", len)?;
-        if !self.invitation_id.is_empty() {
+        if true {
             struct_ser.serialize_field("invitationId", &self.invitation_id)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         struct_ser.end()
@@ -370,11 +370,11 @@ impl serde::Serialize for ActivateBillingTierIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.product_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ActivateBillingTierIntent", len)?;
-        if !self.product_id.is_empty() {
+        if true {
             struct_ser.serialize_field("productId", &self.product_id)?;
         }
         struct_ser.end()
@@ -462,11 +462,11 @@ impl serde::Serialize for ActivateBillingTierResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.product_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ActivateBillingTierResult", len)?;
-        if !self.product_id.is_empty() {
+        if true {
             struct_ser.serialize_field("productId", &self.product_id)?;
         }
         struct_ser.end()
@@ -900,19 +900,19 @@ impl serde::Serialize for Address {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.format != 0 {
+        if true {
             len += 1;
         }
-        if !self.address.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.Address", len)?;
-        if self.format != 0 {
+        if true {
             let v = super::super::common::v1::AddressFormat::try_from(self.format)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.format)))?;
             struct_ser.serialize_field("format", &v)?;
         }
-        if !self.address.is_empty() {
+        if true {
             struct_ser.serialize_field("address", &self.address)?;
         }
         struct_ser.end()
@@ -1010,20 +1010,20 @@ impl serde::Serialize for ApiKeyParams {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.api_key_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.public_key.is_empty() {
+        if true {
             len += 1;
         }
-        if self.expiration_seconds.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ApiKeyParams", len)?;
-        if !self.api_key_name.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeyName", &self.api_key_name)?;
         }
-        if !self.public_key.is_empty() {
+        if true {
             struct_ser.serialize_field("publicKey", &self.public_key)?;
         }
         if let Some(v) = self.expiration_seconds.as_ref() {
@@ -1138,29 +1138,29 @@ impl serde::Serialize for ApiOnlyUserParams {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.user_email.is_some() {
+        if true {
             len += 1;
         }
-        if !self.user_tags.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.api_keys.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ApiOnlyUserParams", len)?;
-        if !self.user_name.is_empty() {
+        if true {
             struct_ser.serialize_field("userName", &self.user_name)?;
         }
         if let Some(v) = self.user_email.as_ref() {
             struct_ser.serialize_field("userEmail", v)?;
         }
-        if !self.user_tags.is_empty() {
+        if true {
             struct_ser.serialize_field("userTags", &self.user_tags)?;
         }
-        if !self.api_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeys", &self.api_keys)?;
         }
         struct_ser.end()
@@ -1284,11 +1284,11 @@ impl serde::Serialize for ApproveActivityIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.fingerprint.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ApproveActivityIntent", len)?;
-        if !self.fingerprint.is_empty() {
+        if true {
             struct_ser.serialize_field("fingerprint", &self.fingerprint)?;
         }
         struct_ser.end()
@@ -1375,29 +1375,29 @@ impl serde::Serialize for Attestation {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.credential_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.client_data_json.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.attestation_object.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.transports.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.Attestation", len)?;
-        if !self.credential_id.is_empty() {
+        if true {
             struct_ser.serialize_field("credentialId", &self.credential_id)?;
         }
-        if !self.client_data_json.is_empty() {
+        if true {
             struct_ser.serialize_field("clientDataJson", &self.client_data_json)?;
         }
-        if !self.attestation_object.is_empty() {
+        if true {
             struct_ser.serialize_field("attestationObject", &self.attestation_object)?;
         }
-        if !self.transports.is_empty() {
+        if true {
             let v = self.transports.iter().cloned().map(|v| {
                 super::super::webauthn::v1::AuthenticatorTransport::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
@@ -1524,29 +1524,29 @@ impl serde::Serialize for AuthenticatorParams {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.authenticator_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.attestation.is_some() {
+        if true {
             len += 1;
         }
-        if !self.challenge.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.AuthenticatorParams", len)?;
-        if !self.authenticator_name.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticatorName", &self.authenticator_name)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         if let Some(v) = self.attestation.as_ref() {
             struct_ser.serialize_field("attestation", v)?;
         }
-        if !self.challenge.is_empty() {
+        if true {
             struct_ser.serialize_field("challenge", &self.challenge)?;
         }
         struct_ser.end()
@@ -1668,20 +1668,20 @@ impl serde::Serialize for AuthenticatorParamsV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.authenticator_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.challenge.is_empty() {
+        if true {
             len += 1;
         }
-        if self.attestation.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.AuthenticatorParamsV2", len)?;
-        if !self.authenticator_name.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticatorName", &self.authenticator_name)?;
         }
-        if !self.challenge.is_empty() {
+        if true {
             struct_ser.serialize_field("challenge", &self.challenge)?;
         }
         if let Some(v) = self.attestation.as_ref() {
@@ -1794,17 +1794,17 @@ impl serde::Serialize for CreateApiKeysIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.api_keys.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateApiKeysIntent", len)?;
-        if !self.api_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeys", &self.api_keys)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         struct_ser.end()
@@ -1904,11 +1904,11 @@ impl serde::Serialize for CreateApiKeysResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.api_key_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateApiKeysResult", len)?;
-        if !self.api_key_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeyIds", &self.api_key_ids)?;
         }
         struct_ser.end()
@@ -1996,11 +1996,11 @@ impl serde::Serialize for CreateApiOnlyUsersIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.api_only_users.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateApiOnlyUsersIntent", len)?;
-        if !self.api_only_users.is_empty() {
+        if true {
             struct_ser.serialize_field("apiOnlyUsers", &self.api_only_users)?;
         }
         struct_ser.end()
@@ -2088,11 +2088,11 @@ impl serde::Serialize for CreateApiOnlyUsersResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateApiOnlyUsersResult", len)?;
-        if !self.user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userIds", &self.user_ids)?;
         }
         struct_ser.end()
@@ -2180,17 +2180,17 @@ impl serde::Serialize for CreateAuthenticatorsIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.authenticators.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateAuthenticatorsIntent", len)?;
-        if !self.authenticators.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticators", &self.authenticators)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         struct_ser.end()
@@ -2289,17 +2289,17 @@ impl serde::Serialize for CreateAuthenticatorsIntentV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.authenticators.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateAuthenticatorsIntentV2", len)?;
-        if !self.authenticators.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticators", &self.authenticators)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         struct_ser.end()
@@ -2398,11 +2398,11 @@ impl serde::Serialize for CreateAuthenticatorsResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.authenticator_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateAuthenticatorsResult", len)?;
-        if !self.authenticator_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticatorIds", &self.authenticator_ids)?;
         }
         struct_ser.end()
@@ -2490,11 +2490,11 @@ impl serde::Serialize for CreateInvitationsIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.invitations.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateInvitationsIntent", len)?;
-        if !self.invitations.is_empty() {
+        if true {
             struct_ser.serialize_field("invitations", &self.invitations)?;
         }
         struct_ser.end()
@@ -2581,11 +2581,11 @@ impl serde::Serialize for CreateInvitationsResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.invitation_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateInvitationsResult", len)?;
-        if !self.invitation_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("invitationIds", &self.invitation_ids)?;
         }
         struct_ser.end()
@@ -2673,23 +2673,23 @@ impl serde::Serialize for CreateOrganizationIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.root_email.is_empty() {
+        if true {
             len += 1;
         }
-        if self.root_authenticator.is_some() {
+        if true {
             len += 1;
         }
-        if self.root_user_id.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateOrganizationIntent", len)?;
-        if !self.organization_name.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationName", &self.organization_name)?;
         }
-        if !self.root_email.is_empty() {
+        if true {
             struct_ser.serialize_field("rootEmail", &self.root_email)?;
         }
         if let Some(v) = self.root_authenticator.as_ref() {
@@ -2819,23 +2819,23 @@ impl serde::Serialize for CreateOrganizationIntentV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.root_email.is_empty() {
+        if true {
             len += 1;
         }
-        if self.root_authenticator.is_some() {
+        if true {
             len += 1;
         }
-        if self.root_user_id.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateOrganizationIntentV2", len)?;
-        if !self.organization_name.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationName", &self.organization_name)?;
         }
-        if !self.root_email.is_empty() {
+        if true {
             struct_ser.serialize_field("rootEmail", &self.root_email)?;
         }
         if let Some(v) = self.root_authenticator.as_ref() {
@@ -2965,11 +2965,11 @@ impl serde::Serialize for CreateOrganizationResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateOrganizationResult", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         struct_ser.end()
@@ -3057,11 +3057,11 @@ impl serde::Serialize for CreatePoliciesIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.policies.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreatePoliciesIntent", len)?;
-        if !self.policies.is_empty() {
+        if true {
             struct_ser.serialize_field("policies", &self.policies)?;
         }
         struct_ser.end()
@@ -3148,11 +3148,11 @@ impl serde::Serialize for CreatePoliciesResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.policy_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreatePoliciesResult", len)?;
-        if !self.policy_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("policyIds", &self.policy_ids)?;
         }
         struct_ser.end()
@@ -3240,31 +3240,31 @@ impl serde::Serialize for CreatePolicyIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.policy_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.selectors.is_empty() {
+        if true {
             len += 1;
         }
-        if self.effect != 0 {
+        if true {
             len += 1;
         }
-        if !self.notes.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreatePolicyIntent", len)?;
-        if !self.policy_name.is_empty() {
+        if true {
             struct_ser.serialize_field("policyName", &self.policy_name)?;
         }
-        if !self.selectors.is_empty() {
+        if true {
             struct_ser.serialize_field("selectors", &self.selectors)?;
         }
-        if self.effect != 0 {
+        if true {
             let v = super::super::common::v1::Effect::try_from(self.effect)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.effect)))?;
             struct_ser.serialize_field("effect", &v)?;
         }
-        if !self.notes.is_empty() {
+        if true {
             struct_ser.serialize_field("notes", &self.notes)?;
         }
         struct_ser.end()
@@ -3385,31 +3385,31 @@ impl serde::Serialize for CreatePolicyIntentV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.policy_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.selectors.is_empty() {
+        if true {
             len += 1;
         }
-        if self.effect != 0 {
+        if true {
             len += 1;
         }
-        if !self.notes.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreatePolicyIntentV2", len)?;
-        if !self.policy_name.is_empty() {
+        if true {
             struct_ser.serialize_field("policyName", &self.policy_name)?;
         }
-        if !self.selectors.is_empty() {
+        if true {
             struct_ser.serialize_field("selectors", &self.selectors)?;
         }
-        if self.effect != 0 {
+        if true {
             let v = super::super::common::v1::Effect::try_from(self.effect)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.effect)))?;
             struct_ser.serialize_field("effect", &v)?;
         }
-        if !self.notes.is_empty() {
+        if true {
             struct_ser.serialize_field("notes", &self.notes)?;
         }
         struct_ser.end()
@@ -3530,26 +3530,26 @@ impl serde::Serialize for CreatePolicyIntentV3 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.policy_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.effect != 0 {
+        if true {
             len += 1;
         }
-        if self.condition.is_some() {
+        if true {
             len += 1;
         }
-        if self.consensus.is_some() {
+        if true {
             len += 1;
         }
-        if !self.notes.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreatePolicyIntentV3", len)?;
-        if !self.policy_name.is_empty() {
+        if true {
             struct_ser.serialize_field("policyName", &self.policy_name)?;
         }
-        if self.effect != 0 {
+        if true {
             let v = super::super::common::v1::Effect::try_from(self.effect)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.effect)))?;
             struct_ser.serialize_field("effect", &v)?;
@@ -3560,7 +3560,7 @@ impl serde::Serialize for CreatePolicyIntentV3 {
         if let Some(v) = self.consensus.as_ref() {
             struct_ser.serialize_field("consensus", v)?;
         }
-        if !self.notes.is_empty() {
+        if true {
             struct_ser.serialize_field("notes", &self.notes)?;
         }
         struct_ser.end()
@@ -3692,11 +3692,11 @@ impl serde::Serialize for CreatePolicyResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.policy_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreatePolicyResult", len)?;
-        if !self.policy_id.is_empty() {
+        if true {
             struct_ser.serialize_field("policyId", &self.policy_id)?;
         }
         struct_ser.end()
@@ -3784,17 +3784,17 @@ impl serde::Serialize for CreatePrivateKeyTagIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_tag_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.private_key_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreatePrivateKeyTagIntent", len)?;
-        if !self.private_key_tag_name.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyTagName", &self.private_key_tag_name)?;
         }
-        if !self.private_key_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyIds", &self.private_key_ids)?;
         }
         struct_ser.end()
@@ -3894,17 +3894,17 @@ impl serde::Serialize for CreatePrivateKeyTagResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_tag_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.private_key_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreatePrivateKeyTagResult", len)?;
-        if !self.private_key_tag_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyTagId", &self.private_key_tag_id)?;
         }
-        if !self.private_key_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyIds", &self.private_key_ids)?;
         }
         struct_ser.end()
@@ -4004,11 +4004,11 @@ impl serde::Serialize for CreatePrivateKeysIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_keys.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreatePrivateKeysIntent", len)?;
-        if !self.private_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeys", &self.private_keys)?;
         }
         struct_ser.end()
@@ -4096,11 +4096,11 @@ impl serde::Serialize for CreatePrivateKeysIntentV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_keys.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreatePrivateKeysIntentV2", len)?;
-        if !self.private_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeys", &self.private_keys)?;
         }
         struct_ser.end()
@@ -4188,11 +4188,11 @@ impl serde::Serialize for CreatePrivateKeysResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreatePrivateKeysResult", len)?;
-        if !self.private_key_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyIds", &self.private_key_ids)?;
         }
         struct_ser.end()
@@ -4280,11 +4280,11 @@ impl serde::Serialize for CreatePrivateKeysResultV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_keys.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreatePrivateKeysResultV2", len)?;
-        if !self.private_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeys", &self.private_keys)?;
         }
         struct_ser.end()
@@ -4443,41 +4443,41 @@ impl serde::Serialize for CreateReadOnlySessionResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.username.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.session.is_empty() {
+        if true {
             len += 1;
         }
-        if self.session_expiry != 0 {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateReadOnlySessionResult", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.organization_name.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationName", &self.organization_name)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
-        if !self.username.is_empty() {
+        if true {
             struct_ser.serialize_field("username", &self.username)?;
         }
-        if !self.session.is_empty() {
+        if true {
             struct_ser.serialize_field("session", &self.session)?;
         }
-        if self.session_expiry != 0 {
+        if true {
             #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("sessionExpiry", ToString::to_string(&self.session_expiry).as_str())?;
         }
@@ -4626,14 +4626,14 @@ impl serde::Serialize for CreateSubOrganizationIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.root_authenticator.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateSubOrganizationIntent", len)?;
-        if !self.name.is_empty() {
+        if true {
             struct_ser.serialize_field("name", &self.name)?;
         }
         if let Some(v) = self.root_authenticator.as_ref() {
@@ -4735,23 +4735,23 @@ impl serde::Serialize for CreateSubOrganizationIntentV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.sub_organization_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.root_users.is_empty() {
+        if true {
             len += 1;
         }
-        if self.root_quorum_threshold != 0 {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateSubOrganizationIntentV2", len)?;
-        if !self.sub_organization_name.is_empty() {
+        if true {
             struct_ser.serialize_field("subOrganizationName", &self.sub_organization_name)?;
         }
-        if !self.root_users.is_empty() {
+        if true {
             struct_ser.serialize_field("rootUsers", &self.root_users)?;
         }
-        if self.root_quorum_threshold != 0 {
+        if true {
             struct_ser.serialize_field("rootQuorumThreshold", &self.root_quorum_threshold)?;
         }
         struct_ser.end()
@@ -4865,29 +4865,29 @@ impl serde::Serialize for CreateSubOrganizationIntentV3 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.sub_organization_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.root_users.is_empty() {
+        if true {
             len += 1;
         }
-        if self.root_quorum_threshold != 0 {
+        if true {
             len += 1;
         }
-        if !self.private_keys.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateSubOrganizationIntentV3", len)?;
-        if !self.sub_organization_name.is_empty() {
+        if true {
             struct_ser.serialize_field("subOrganizationName", &self.sub_organization_name)?;
         }
-        if !self.root_users.is_empty() {
+        if true {
             struct_ser.serialize_field("rootUsers", &self.root_users)?;
         }
-        if self.root_quorum_threshold != 0 {
+        if true {
             struct_ser.serialize_field("rootQuorumThreshold", &self.root_quorum_threshold)?;
         }
-        if !self.private_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeys", &self.private_keys)?;
         }
         struct_ser.end()
@@ -5013,32 +5013,32 @@ impl serde::Serialize for CreateSubOrganizationIntentV4 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.sub_organization_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.root_users.is_empty() {
+        if true {
             len += 1;
         }
-        if self.root_quorum_threshold != 0 {
+        if true {
             len += 1;
         }
-        if self.wallet.is_some() {
+        if true {
             len += 1;
         }
-        if self.disable_email_recovery.is_some() {
+        if true {
             len += 1;
         }
-        if self.disable_email_auth.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateSubOrganizationIntentV4", len)?;
-        if !self.sub_organization_name.is_empty() {
+        if true {
             struct_ser.serialize_field("subOrganizationName", &self.sub_organization_name)?;
         }
-        if !self.root_users.is_empty() {
+        if true {
             struct_ser.serialize_field("rootUsers", &self.root_users)?;
         }
-        if self.root_quorum_threshold != 0 {
+        if true {
             struct_ser.serialize_field("rootQuorumThreshold", &self.root_quorum_threshold)?;
         }
         if let Some(v) = self.wallet.as_ref() {
@@ -5196,17 +5196,17 @@ impl serde::Serialize for CreateSubOrganizationResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.sub_organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.root_user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateSubOrganizationResult", len)?;
-        if !self.sub_organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("subOrganizationId", &self.sub_organization_id)?;
         }
-        if !self.root_user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("rootUserIds", &self.root_user_ids)?;
         }
         struct_ser.end()
@@ -5306,23 +5306,23 @@ impl serde::Serialize for CreateSubOrganizationResultV3 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.sub_organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.private_keys.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.root_user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateSubOrganizationResultV3", len)?;
-        if !self.sub_organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("subOrganizationId", &self.sub_organization_id)?;
         }
-        if !self.private_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeys", &self.private_keys)?;
         }
-        if !self.root_user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("rootUserIds", &self.root_user_ids)?;
         }
         struct_ser.end()
@@ -5434,23 +5434,23 @@ impl serde::Serialize for CreateSubOrganizationResultV4 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.sub_organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.wallet.is_some() {
+        if true {
             len += 1;
         }
-        if !self.root_user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateSubOrganizationResultV4", len)?;
-        if !self.sub_organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("subOrganizationId", &self.sub_organization_id)?;
         }
         if let Some(v) = self.wallet.as_ref() {
             struct_ser.serialize_field("wallet", v)?;
         }
-        if !self.root_user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("rootUserIds", &self.root_user_ids)?;
         }
         struct_ser.end()
@@ -5561,17 +5561,17 @@ impl serde::Serialize for CreateUserTagIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_tag_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateUserTagIntent", len)?;
-        if !self.user_tag_name.is_empty() {
+        if true {
             struct_ser.serialize_field("userTagName", &self.user_tag_name)?;
         }
-        if !self.user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userIds", &self.user_ids)?;
         }
         struct_ser.end()
@@ -5671,17 +5671,17 @@ impl serde::Serialize for CreateUserTagResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_tag_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateUserTagResult", len)?;
-        if !self.user_tag_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userTagId", &self.user_tag_id)?;
         }
-        if !self.user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userIds", &self.user_ids)?;
         }
         struct_ser.end()
@@ -5781,11 +5781,11 @@ impl serde::Serialize for CreateUsersIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.users.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateUsersIntent", len)?;
-        if !self.users.is_empty() {
+        if true {
             struct_ser.serialize_field("users", &self.users)?;
         }
         struct_ser.end()
@@ -5872,11 +5872,11 @@ impl serde::Serialize for CreateUsersIntentV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.users.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateUsersIntentV2", len)?;
-        if !self.users.is_empty() {
+        if true {
             struct_ser.serialize_field("users", &self.users)?;
         }
         struct_ser.end()
@@ -5963,11 +5963,11 @@ impl serde::Serialize for CreateUsersResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateUsersResult", len)?;
-        if !self.user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userIds", &self.user_ids)?;
         }
         struct_ser.end()
@@ -6055,17 +6055,17 @@ impl serde::Serialize for CreateWalletAccountsIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.wallet_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.accounts.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateWalletAccountsIntent", len)?;
-        if !self.wallet_id.is_empty() {
+        if true {
             struct_ser.serialize_field("walletId", &self.wallet_id)?;
         }
-        if !self.accounts.is_empty() {
+        if true {
             struct_ser.serialize_field("accounts", &self.accounts)?;
         }
         struct_ser.end()
@@ -6164,11 +6164,11 @@ impl serde::Serialize for CreateWalletAccountsResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.addresses.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateWalletAccountsResult", len)?;
-        if !self.addresses.is_empty() {
+        if true {
             struct_ser.serialize_field("addresses", &self.addresses)?;
         }
         struct_ser.end()
@@ -6255,20 +6255,20 @@ impl serde::Serialize for CreateWalletIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.wallet_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.accounts.is_empty() {
+        if true {
             len += 1;
         }
-        if self.mnemonic_length.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateWalletIntent", len)?;
-        if !self.wallet_name.is_empty() {
+        if true {
             struct_ser.serialize_field("walletName", &self.wallet_name)?;
         }
-        if !self.accounts.is_empty() {
+        if true {
             struct_ser.serialize_field("accounts", &self.accounts)?;
         }
         if let Some(v) = self.mnemonic_length.as_ref() {
@@ -6384,17 +6384,17 @@ impl serde::Serialize for CreateWalletResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.wallet_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.addresses.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.CreateWalletResult", len)?;
-        if !self.wallet_id.is_empty() {
+        if true {
             struct_ser.serialize_field("walletId", &self.wallet_id)?;
         }
-        if !self.addresses.is_empty() {
+        if true {
             struct_ser.serialize_field("addresses", &self.addresses)?;
         }
         struct_ser.end()
@@ -6493,17 +6493,17 @@ impl serde::Serialize for DeleteApiKeysIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.api_key_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeleteApiKeysIntent", len)?;
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
-        if !self.api_key_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeyIds", &self.api_key_ids)?;
         }
         struct_ser.end()
@@ -6603,11 +6603,11 @@ impl serde::Serialize for DeleteApiKeysResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.api_key_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeleteApiKeysResult", len)?;
-        if !self.api_key_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeyIds", &self.api_key_ids)?;
         }
         struct_ser.end()
@@ -6695,17 +6695,17 @@ impl serde::Serialize for DeleteAuthenticatorsIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.authenticator_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeleteAuthenticatorsIntent", len)?;
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
-        if !self.authenticator_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticatorIds", &self.authenticator_ids)?;
         }
         struct_ser.end()
@@ -6805,11 +6805,11 @@ impl serde::Serialize for DeleteAuthenticatorsResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.authenticator_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeleteAuthenticatorsResult", len)?;
-        if !self.authenticator_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticatorIds", &self.authenticator_ids)?;
         }
         struct_ser.end()
@@ -6897,11 +6897,11 @@ impl serde::Serialize for DeleteInvitationIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.invitation_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeleteInvitationIntent", len)?;
-        if !self.invitation_id.is_empty() {
+        if true {
             struct_ser.serialize_field("invitationId", &self.invitation_id)?;
         }
         struct_ser.end()
@@ -6989,11 +6989,11 @@ impl serde::Serialize for DeleteInvitationResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.invitation_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeleteInvitationResult", len)?;
-        if !self.invitation_id.is_empty() {
+        if true {
             struct_ser.serialize_field("invitationId", &self.invitation_id)?;
         }
         struct_ser.end()
@@ -7081,11 +7081,11 @@ impl serde::Serialize for DeleteOrganizationIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeleteOrganizationIntent", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         struct_ser.end()
@@ -7173,11 +7173,11 @@ impl serde::Serialize for DeleteOrganizationResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeleteOrganizationResult", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         struct_ser.end()
@@ -7265,7 +7265,7 @@ impl serde::Serialize for DeletePaymentMethodIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.payment_method_id.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeletePaymentMethodIntent", len)?;
@@ -7357,11 +7357,11 @@ impl serde::Serialize for DeletePaymentMethodResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.payment_method_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeletePaymentMethodResult", len)?;
-        if !self.payment_method_id.is_empty() {
+        if true {
             struct_ser.serialize_field("paymentMethodId", &self.payment_method_id)?;
         }
         struct_ser.end()
@@ -7449,11 +7449,11 @@ impl serde::Serialize for DeletePolicyIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.policy_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeletePolicyIntent", len)?;
-        if !self.policy_id.is_empty() {
+        if true {
             struct_ser.serialize_field("policyId", &self.policy_id)?;
         }
         struct_ser.end()
@@ -7541,11 +7541,11 @@ impl serde::Serialize for DeletePolicyResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.policy_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeletePolicyResult", len)?;
-        if !self.policy_id.is_empty() {
+        if true {
             struct_ser.serialize_field("policyId", &self.policy_id)?;
         }
         struct_ser.end()
@@ -7633,11 +7633,11 @@ impl serde::Serialize for DeletePrivateKeyTagsIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_tag_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeletePrivateKeyTagsIntent", len)?;
-        if !self.private_key_tag_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyTagIds", &self.private_key_tag_ids)?;
         }
         struct_ser.end()
@@ -7725,17 +7725,17 @@ impl serde::Serialize for DeletePrivateKeyTagsResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_tag_ids.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.private_key_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeletePrivateKeyTagsResult", len)?;
-        if !self.private_key_tag_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyTagIds", &self.private_key_tag_ids)?;
         }
-        if !self.private_key_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyIds", &self.private_key_ids)?;
         }
         struct_ser.end()
@@ -7835,11 +7835,11 @@ impl serde::Serialize for DeleteUserTagsIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_tag_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeleteUserTagsIntent", len)?;
-        if !self.user_tag_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userTagIds", &self.user_tag_ids)?;
         }
         struct_ser.end()
@@ -7927,17 +7927,17 @@ impl serde::Serialize for DeleteUserTagsResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_tag_ids.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeleteUserTagsResult", len)?;
-        if !self.user_tag_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userTagIds", &self.user_tag_ids)?;
         }
-        if !self.user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userIds", &self.user_ids)?;
         }
         struct_ser.end()
@@ -8037,11 +8037,11 @@ impl serde::Serialize for DeleteUsersIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeleteUsersIntent", len)?;
-        if !self.user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userIds", &self.user_ids)?;
         }
         struct_ser.end()
@@ -8129,11 +8129,11 @@ impl serde::Serialize for DeleteUsersResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DeleteUsersResult", len)?;
-        if !self.user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userIds", &self.user_ids)?;
         }
         struct_ser.end()
@@ -8221,11 +8221,11 @@ impl serde::Serialize for DisablePrivateKeyIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DisablePrivateKeyIntent", len)?;
-        if !self.private_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyId", &self.private_key_id)?;
         }
         struct_ser.end()
@@ -8313,11 +8313,11 @@ impl serde::Serialize for DisablePrivateKeyResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.DisablePrivateKeyResult", len)?;
-        if !self.private_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyId", &self.private_key_id)?;
         }
         struct_ser.end()
@@ -8405,26 +8405,26 @@ impl serde::Serialize for EmailAuthIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.email.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.target_public_key.is_empty() {
+        if true {
             len += 1;
         }
-        if self.api_key_name.is_some() {
+        if true {
             len += 1;
         }
-        if self.expiration_seconds.is_some() {
+        if true {
             len += 1;
         }
-        if self.email_customization.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.EmailAuthIntent", len)?;
-        if !self.email.is_empty() {
+        if true {
             struct_ser.serialize_field("email", &self.email)?;
         }
-        if !self.target_public_key.is_empty() {
+        if true {
             struct_ser.serialize_field("targetPublicKey", &self.target_public_key)?;
         }
         if let Some(v) = self.api_key_name.as_ref() {
@@ -8568,17 +8568,17 @@ impl serde::Serialize for EmailAuthResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.api_key_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.EmailAuthResult", len)?;
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
-        if !self.api_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeyId", &self.api_key_id)?;
         }
         struct_ser.end()
@@ -8678,19 +8678,19 @@ impl serde::Serialize for EmailCustomizationParams {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.app_name.is_some() {
+        if true {
             len += 1;
         }
-        if self.logo_url.is_some() {
+        if true {
             len += 1;
         }
-        if self.magic_link_template.is_some() {
+        if true {
             len += 1;
         }
-        if self.template_variables.is_some() {
+        if true {
             len += 1;
         }
-        if self.template_id.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.EmailCustomizationParams", len)?;
@@ -8842,17 +8842,17 @@ impl serde::Serialize for ExportPrivateKeyIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.target_public_key.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ExportPrivateKeyIntent", len)?;
-        if !self.private_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyId", &self.private_key_id)?;
         }
-        if !self.target_public_key.is_empty() {
+        if true {
             struct_ser.serialize_field("targetPublicKey", &self.target_public_key)?;
         }
         struct_ser.end()
@@ -8952,17 +8952,17 @@ impl serde::Serialize for ExportPrivateKeyResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.export_bundle.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ExportPrivateKeyResult", len)?;
-        if !self.private_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyId", &self.private_key_id)?;
         }
-        if !self.export_bundle.is_empty() {
+        if true {
             struct_ser.serialize_field("exportBundle", &self.export_bundle)?;
         }
         struct_ser.end()
@@ -9062,17 +9062,17 @@ impl serde::Serialize for ExportWalletAccountIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.address.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.target_public_key.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ExportWalletAccountIntent", len)?;
-        if !self.address.is_empty() {
+        if true {
             struct_ser.serialize_field("address", &self.address)?;
         }
-        if !self.target_public_key.is_empty() {
+        if true {
             struct_ser.serialize_field("targetPublicKey", &self.target_public_key)?;
         }
         struct_ser.end()
@@ -9171,17 +9171,17 @@ impl serde::Serialize for ExportWalletAccountResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.address.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.export_bundle.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ExportWalletAccountResult", len)?;
-        if !self.address.is_empty() {
+        if true {
             struct_ser.serialize_field("address", &self.address)?;
         }
-        if !self.export_bundle.is_empty() {
+        if true {
             struct_ser.serialize_field("exportBundle", &self.export_bundle)?;
         }
         struct_ser.end()
@@ -9280,20 +9280,20 @@ impl serde::Serialize for ExportWalletIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.wallet_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.target_public_key.is_empty() {
+        if true {
             len += 1;
         }
-        if self.language.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ExportWalletIntent", len)?;
-        if !self.wallet_id.is_empty() {
+        if true {
             struct_ser.serialize_field("walletId", &self.wallet_id)?;
         }
-        if !self.target_public_key.is_empty() {
+        if true {
             struct_ser.serialize_field("targetPublicKey", &self.target_public_key)?;
         }
         if let Some(v) = self.language.as_ref() {
@@ -9409,17 +9409,17 @@ impl serde::Serialize for ExportWalletResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.wallet_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.export_bundle.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ExportWalletResult", len)?;
-        if !self.wallet_id.is_empty() {
+        if true {
             struct_ser.serialize_field("walletId", &self.wallet_id)?;
         }
-        if !self.export_bundle.is_empty() {
+        if true {
             struct_ser.serialize_field("exportBundle", &self.export_bundle)?;
         }
         struct_ser.end()
@@ -9519,37 +9519,37 @@ impl serde::Serialize for ImportPrivateKeyIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.private_key_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.encrypted_bundle.is_empty() {
+        if true {
             len += 1;
         }
-        if self.curve != 0 {
+        if true {
             len += 1;
         }
-        if !self.address_formats.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ImportPrivateKeyIntent", len)?;
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
-        if !self.private_key_name.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyName", &self.private_key_name)?;
         }
-        if !self.encrypted_bundle.is_empty() {
+        if true {
             struct_ser.serialize_field("encryptedBundle", &self.encrypted_bundle)?;
         }
-        if self.curve != 0 {
+        if true {
             let v = super::super::common::v1::Curve::try_from(self.curve)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.curve)))?;
             struct_ser.serialize_field("curve", &v)?;
         }
-        if !self.address_formats.is_empty() {
+        if true {
             let v = self.address_formats.iter().cloned().map(|v| {
                 super::super::common::v1::AddressFormat::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
@@ -9688,17 +9688,17 @@ impl serde::Serialize for ImportPrivateKeyResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.addresses.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ImportPrivateKeyResult", len)?;
-        if !self.private_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyId", &self.private_key_id)?;
         }
-        if !self.addresses.is_empty() {
+        if true {
             struct_ser.serialize_field("addresses", &self.addresses)?;
         }
         struct_ser.end()
@@ -9797,29 +9797,29 @@ impl serde::Serialize for ImportWalletIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.wallet_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.encrypted_bundle.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.accounts.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ImportWalletIntent", len)?;
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
-        if !self.wallet_name.is_empty() {
+        if true {
             struct_ser.serialize_field("walletName", &self.wallet_name)?;
         }
-        if !self.encrypted_bundle.is_empty() {
+        if true {
             struct_ser.serialize_field("encryptedBundle", &self.encrypted_bundle)?;
         }
-        if !self.accounts.is_empty() {
+        if true {
             struct_ser.serialize_field("accounts", &self.accounts)?;
         }
         struct_ser.end()
@@ -9942,17 +9942,17 @@ impl serde::Serialize for ImportWalletResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.wallet_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.addresses.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.ImportWalletResult", len)?;
-        if !self.wallet_id.is_empty() {
+        if true {
             struct_ser.serialize_field("walletId", &self.wallet_id)?;
         }
-        if !self.addresses.is_empty() {
+        if true {
             struct_ser.serialize_field("addresses", &self.addresses)?;
         }
         struct_ser.end()
@@ -10051,11 +10051,11 @@ impl serde::Serialize for InitImportPrivateKeyIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.InitImportPrivateKeyIntent", len)?;
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         struct_ser.end()
@@ -10143,11 +10143,11 @@ impl serde::Serialize for InitImportPrivateKeyResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.import_bundle.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.InitImportPrivateKeyResult", len)?;
-        if !self.import_bundle.is_empty() {
+        if true {
             struct_ser.serialize_field("importBundle", &self.import_bundle)?;
         }
         struct_ser.end()
@@ -10235,11 +10235,11 @@ impl serde::Serialize for InitImportWalletIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.InitImportWalletIntent", len)?;
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         struct_ser.end()
@@ -10327,11 +10327,11 @@ impl serde::Serialize for InitImportWalletResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.import_bundle.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.InitImportWalletResult", len)?;
-        if !self.import_bundle.is_empty() {
+        if true {
             struct_ser.serialize_field("importBundle", &self.import_bundle)?;
         }
         struct_ser.end()
@@ -10419,23 +10419,23 @@ impl serde::Serialize for InitUserEmailRecoveryIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.email.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.target_public_key.is_empty() {
+        if true {
             len += 1;
         }
-        if self.expiration_seconds.is_some() {
+        if true {
             len += 1;
         }
-        if self.email_customization.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.InitUserEmailRecoveryIntent", len)?;
-        if !self.email.is_empty() {
+        if true {
             struct_ser.serialize_field("email", &self.email)?;
         }
-        if !self.target_public_key.is_empty() {
+        if true {
             struct_ser.serialize_field("targetPublicKey", &self.target_public_key)?;
         }
         if let Some(v) = self.expiration_seconds.as_ref() {
@@ -10564,11 +10564,11 @@ impl serde::Serialize for InitUserEmailRecoveryResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.InitUserEmailRecoveryResult", len)?;
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         struct_ser.end()
@@ -11635,37 +11635,37 @@ impl serde::Serialize for InvitationParams {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.receiver_user_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.receiver_user_email.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.receiver_user_tags.is_empty() {
+        if true {
             len += 1;
         }
-        if self.access_type != 0 {
+        if true {
             len += 1;
         }
-        if !self.sender_user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.InvitationParams", len)?;
-        if !self.receiver_user_name.is_empty() {
+        if true {
             struct_ser.serialize_field("receiverUserName", &self.receiver_user_name)?;
         }
-        if !self.receiver_user_email.is_empty() {
+        if true {
             struct_ser.serialize_field("receiverUserEmail", &self.receiver_user_email)?;
         }
-        if !self.receiver_user_tags.is_empty() {
+        if true {
             struct_ser.serialize_field("receiverUserTags", &self.receiver_user_tags)?;
         }
-        if self.access_type != 0 {
+        if true {
             let v = super::super::common::v1::AccessType::try_from(self.access_type)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.access_type)))?;
             struct_ser.serialize_field("accessType", &v)?;
         }
-        if !self.sender_user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("senderUserId", &self.sender_user_id)?;
         }
         struct_ser.end()
@@ -11801,31 +11801,31 @@ impl serde::Serialize for PrivateKeyParams {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.curve != 0 {
+        if true {
             len += 1;
         }
-        if !self.private_key_tags.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.address_formats.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.PrivateKeyParams", len)?;
-        if !self.private_key_name.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyName", &self.private_key_name)?;
         }
-        if self.curve != 0 {
+        if true {
             let v = super::super::common::v1::Curve::try_from(self.curve)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.curve)))?;
             struct_ser.serialize_field("curve", &v)?;
         }
-        if !self.private_key_tags.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyTags", &self.private_key_tags)?;
         }
-        if !self.address_formats.is_empty() {
+        if true {
             let v = self.address_formats.iter().cloned().map(|v| {
                 super::super::common::v1::AddressFormat::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
@@ -11952,17 +11952,17 @@ impl serde::Serialize for PrivateKeyResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.addresses.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.PrivateKeyResult", len)?;
-        if !self.private_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyId", &self.private_key_id)?;
         }
-        if !self.addresses.is_empty() {
+        if true {
             struct_ser.serialize_field("addresses", &self.addresses)?;
         }
         struct_ser.end()
@@ -12061,17 +12061,17 @@ impl serde::Serialize for RecoverUserIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.authenticator.is_some() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.RecoverUserIntent", len)?;
         if let Some(v) = self.authenticator.as_ref() {
             struct_ser.serialize_field("authenticator", v)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         struct_ser.end()
@@ -12170,11 +12170,11 @@ impl serde::Serialize for RecoverUserResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.authenticator_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.RecoverUserResult", len)?;
-        if !self.authenticator_id.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticatorId", &self.authenticator_id)?;
         }
         struct_ser.end()
@@ -12262,11 +12262,11 @@ impl serde::Serialize for RejectActivityIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.fingerprint.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.RejectActivityIntent", len)?;
-        if !self.fingerprint.is_empty() {
+        if true {
             struct_ser.serialize_field("fingerprint", &self.fingerprint)?;
         }
         struct_ser.end()
@@ -12353,11 +12353,11 @@ impl serde::Serialize for RemoveOrganizationFeatureIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.name != 0 {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.RemoveOrganizationFeatureIntent", len)?;
-        if self.name != 0 {
+        if true {
             let v = super::super::common::v1::FeatureName::try_from(self.name)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.name)))?;
             struct_ser.serialize_field("name", &v)?;
@@ -12446,11 +12446,11 @@ impl serde::Serialize for RemoveOrganizationFeatureResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.features.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.RemoveOrganizationFeatureResult", len)?;
-        if !self.features.is_empty() {
+        if true {
             struct_ser.serialize_field("features", &self.features)?;
         }
         struct_ser.end()
@@ -13348,29 +13348,29 @@ impl serde::Serialize for RootUserParams {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.user_email.is_some() {
+        if true {
             len += 1;
         }
-        if !self.api_keys.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.authenticators.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.RootUserParams", len)?;
-        if !self.user_name.is_empty() {
+        if true {
             struct_ser.serialize_field("userName", &self.user_name)?;
         }
         if let Some(v) = self.user_email.as_ref() {
             struct_ser.serialize_field("userEmail", v)?;
         }
-        if !self.api_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeys", &self.api_keys)?;
         }
-        if !self.authenticators.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticators", &self.authenticators)?;
         }
         struct_ser.end()
@@ -13493,25 +13493,25 @@ impl serde::Serialize for Selector {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.subject.is_empty() {
+        if true {
             len += 1;
         }
-        if self.operator != 0 {
+        if true {
             len += 1;
         }
-        if !self.target.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.Selector", len)?;
-        if !self.subject.is_empty() {
+        if true {
             struct_ser.serialize_field("subject", &self.subject)?;
         }
-        if self.operator != 0 {
+        if true {
             let v = super::super::common::v1::Operator::try_from(self.operator)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.operator)))?;
             struct_ser.serialize_field("operator", &v)?;
         }
-        if !self.target.is_empty() {
+        if true {
             struct_ser.serialize_field("target", &self.target)?;
         }
         struct_ser.end()
@@ -13620,25 +13620,25 @@ impl serde::Serialize for SelectorV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.subject.is_empty() {
+        if true {
             len += 1;
         }
-        if self.operator != 0 {
+        if true {
             len += 1;
         }
-        if !self.targets.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SelectorV2", len)?;
-        if !self.subject.is_empty() {
+        if true {
             struct_ser.serialize_field("subject", &self.subject)?;
         }
-        if self.operator != 0 {
+        if true {
             let v = super::super::common::v1::Operator::try_from(self.operator)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.operator)))?;
             struct_ser.serialize_field("operator", &v)?;
         }
-        if !self.targets.is_empty() {
+        if true {
             struct_ser.serialize_field("targets", &self.targets)?;
         }
         struct_ser.end()
@@ -13747,14 +13747,14 @@ impl serde::Serialize for SetOrganizationFeatureIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.name != 0 {
+        if true {
             len += 1;
         }
-        if self.value.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SetOrganizationFeatureIntent", len)?;
-        if self.name != 0 {
+        if true {
             let v = super::super::common::v1::FeatureName::try_from(self.name)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.name)))?;
             struct_ser.serialize_field("name", &v)?;
@@ -13857,11 +13857,11 @@ impl serde::Serialize for SetOrganizationFeatureResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.features.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SetOrganizationFeatureResult", len)?;
-        if !self.features.is_empty() {
+        if true {
             struct_ser.serialize_field("features", &self.features)?;
         }
         struct_ser.end()
@@ -13948,41 +13948,41 @@ impl serde::Serialize for SetPaymentMethodIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.number.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.cvv.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.expiry_month.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.expiry_year.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.card_holder_email.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.card_holder_name.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SetPaymentMethodIntent", len)?;
-        if !self.number.is_empty() {
+        if true {
             struct_ser.serialize_field("number", &self.number)?;
         }
-        if !self.cvv.is_empty() {
+        if true {
             struct_ser.serialize_field("cvv", &self.cvv)?;
         }
-        if !self.expiry_month.is_empty() {
+        if true {
             struct_ser.serialize_field("expiryMonth", &self.expiry_month)?;
         }
-        if !self.expiry_year.is_empty() {
+        if true {
             struct_ser.serialize_field("expiryYear", &self.expiry_year)?;
         }
-        if !self.card_holder_email.is_empty() {
+        if true {
             struct_ser.serialize_field("cardHolderEmail", &self.card_holder_email)?;
         }
-        if !self.card_holder_name.is_empty() {
+        if true {
             struct_ser.serialize_field("cardHolderName", &self.card_holder_name)?;
         }
         struct_ser.end()
@@ -14128,23 +14128,23 @@ impl serde::Serialize for SetPaymentMethodIntentV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.payment_method_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.card_holder_email.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.card_holder_name.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SetPaymentMethodIntentV2", len)?;
-        if !self.payment_method_id.is_empty() {
+        if true {
             struct_ser.serialize_field("paymentMethodId", &self.payment_method_id)?;
         }
-        if !self.card_holder_email.is_empty() {
+        if true {
             struct_ser.serialize_field("cardHolderEmail", &self.card_holder_email)?;
         }
-        if !self.card_holder_name.is_empty() {
+        if true {
             struct_ser.serialize_field("cardHolderName", &self.card_holder_name)?;
         }
         struct_ser.end()
@@ -14256,23 +14256,23 @@ impl serde::Serialize for SetPaymentMethodResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.last_four.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.card_holder_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.card_holder_email.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SetPaymentMethodResult", len)?;
-        if !self.last_four.is_empty() {
+        if true {
             struct_ser.serialize_field("lastFour", &self.last_four)?;
         }
-        if !self.card_holder_name.is_empty() {
+        if true {
             struct_ser.serialize_field("cardHolderName", &self.card_holder_name)?;
         }
-        if !self.card_holder_email.is_empty() {
+        if true {
             struct_ser.serialize_field("cardHolderEmail", &self.card_holder_email)?;
         }
         struct_ser.end()
@@ -14384,31 +14384,31 @@ impl serde::Serialize for SignRawPayloadIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.payload.is_empty() {
+        if true {
             len += 1;
         }
-        if self.encoding != 0 {
+        if true {
             len += 1;
         }
-        if self.hash_function != 0 {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SignRawPayloadIntent", len)?;
-        if !self.private_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyId", &self.private_key_id)?;
         }
-        if !self.payload.is_empty() {
+        if true {
             struct_ser.serialize_field("payload", &self.payload)?;
         }
-        if self.encoding != 0 {
+        if true {
             let v = super::super::common::v1::PayloadEncoding::try_from(self.encoding)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.encoding)))?;
             struct_ser.serialize_field("encoding", &v)?;
         }
-        if self.hash_function != 0 {
+        if true {
             let v = super::super::common::v1::HashFunction::try_from(self.hash_function)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.hash_function)))?;
             struct_ser.serialize_field("hashFunction", &v)?;
@@ -14532,31 +14532,31 @@ impl serde::Serialize for SignRawPayloadIntentV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.sign_with.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.payload.is_empty() {
+        if true {
             len += 1;
         }
-        if self.encoding != 0 {
+        if true {
             len += 1;
         }
-        if self.hash_function != 0 {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SignRawPayloadIntentV2", len)?;
-        if !self.sign_with.is_empty() {
+        if true {
             struct_ser.serialize_field("signWith", &self.sign_with)?;
         }
-        if !self.payload.is_empty() {
+        if true {
             struct_ser.serialize_field("payload", &self.payload)?;
         }
-        if self.encoding != 0 {
+        if true {
             let v = super::super::common::v1::PayloadEncoding::try_from(self.encoding)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.encoding)))?;
             struct_ser.serialize_field("encoding", &v)?;
         }
-        if self.hash_function != 0 {
+        if true {
             let v = super::super::common::v1::HashFunction::try_from(self.hash_function)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.hash_function)))?;
             struct_ser.serialize_field("hashFunction", &v)?;
@@ -14680,23 +14680,23 @@ impl serde::Serialize for SignRawPayloadResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.s.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.v.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SignRawPayloadResult", len)?;
-        if !self.r.is_empty() {
+        if true {
             struct_ser.serialize_field("r", &self.r)?;
         }
-        if !self.s.is_empty() {
+        if true {
             struct_ser.serialize_field("s", &self.s)?;
         }
-        if !self.v.is_empty() {
+        if true {
             struct_ser.serialize_field("v", &self.v)?;
         }
         struct_ser.end()
@@ -14805,31 +14805,31 @@ impl serde::Serialize for SignRawPayloadsIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.sign_with.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.payloads.is_empty() {
+        if true {
             len += 1;
         }
-        if self.encoding != 0 {
+        if true {
             len += 1;
         }
-        if self.hash_function != 0 {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SignRawPayloadsIntent", len)?;
-        if !self.sign_with.is_empty() {
+        if true {
             struct_ser.serialize_field("signWith", &self.sign_with)?;
         }
-        if !self.payloads.is_empty() {
+        if true {
             struct_ser.serialize_field("payloads", &self.payloads)?;
         }
-        if self.encoding != 0 {
+        if true {
             let v = super::super::common::v1::PayloadEncoding::try_from(self.encoding)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.encoding)))?;
             struct_ser.serialize_field("encoding", &v)?;
         }
-        if self.hash_function != 0 {
+        if true {
             let v = super::super::common::v1::HashFunction::try_from(self.hash_function)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.hash_function)))?;
             struct_ser.serialize_field("hashFunction", &v)?;
@@ -14953,11 +14953,11 @@ impl serde::Serialize for SignRawPayloadsResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.signatures.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SignRawPayloadsResult", len)?;
-        if !self.signatures.is_empty() {
+        if true {
             struct_ser.serialize_field("signatures", &self.signatures)?;
         }
         struct_ser.end()
@@ -15044,23 +15044,23 @@ impl serde::Serialize for SignTransactionIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.unsigned_transaction.is_empty() {
+        if true {
             len += 1;
         }
-        if self.r#type != 0 {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SignTransactionIntent", len)?;
-        if !self.private_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyId", &self.private_key_id)?;
         }
-        if !self.unsigned_transaction.is_empty() {
+        if true {
             struct_ser.serialize_field("unsignedTransaction", &self.unsigned_transaction)?;
         }
-        if self.r#type != 0 {
+        if true {
             let v = super::super::common::v1::TransactionType::try_from(self.r#type)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.r#type)))?;
             struct_ser.serialize_field("type", &v)?;
@@ -15173,23 +15173,23 @@ impl serde::Serialize for SignTransactionIntentV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.sign_with.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.unsigned_transaction.is_empty() {
+        if true {
             len += 1;
         }
-        if self.r#type != 0 {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SignTransactionIntentV2", len)?;
-        if !self.sign_with.is_empty() {
+        if true {
             struct_ser.serialize_field("signWith", &self.sign_with)?;
         }
-        if !self.unsigned_transaction.is_empty() {
+        if true {
             struct_ser.serialize_field("unsignedTransaction", &self.unsigned_transaction)?;
         }
-        if self.r#type != 0 {
+        if true {
             let v = super::super::common::v1::TransactionType::try_from(self.r#type)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.r#type)))?;
             struct_ser.serialize_field("type", &v)?;
@@ -15302,11 +15302,11 @@ impl serde::Serialize for SignTransactionResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.signed_transaction.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.SignTransactionResult", len)?;
-        if !self.signed_transaction.is_empty() {
+        if true {
             struct_ser.serialize_field("signedTransaction", &self.signed_transaction)?;
         }
         struct_ser.end()
@@ -15394,11 +15394,11 @@ impl serde::Serialize for UpdateAllowedOriginsIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.allowed_origins.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.UpdateAllowedOriginsIntent", len)?;
-        if !self.allowed_origins.is_empty() {
+        if true {
             struct_ser.serialize_field("allowedOrigins", &self.allowed_origins)?;
         }
         struct_ser.end()
@@ -15557,26 +15557,26 @@ impl serde::Serialize for UpdatePolicyIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.policy_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.policy_name.is_some() {
+        if true {
             len += 1;
         }
-        if self.policy_effect.is_some() {
+        if true {
             len += 1;
         }
-        if self.policy_condition.is_some() {
+        if true {
             len += 1;
         }
-        if self.policy_consensus.is_some() {
+        if true {
             len += 1;
         }
-        if self.policy_notes.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.UpdatePolicyIntent", len)?;
-        if !self.policy_id.is_empty() {
+        if true {
             struct_ser.serialize_field("policyId", &self.policy_id)?;
         }
         if let Some(v) = self.policy_name.as_ref() {
@@ -15741,11 +15741,11 @@ impl serde::Serialize for UpdatePolicyResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.policy_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.UpdatePolicyResult", len)?;
-        if !self.policy_id.is_empty() {
+        if true {
             struct_ser.serialize_field("policyId", &self.policy_id)?;
         }
         struct_ser.end()
@@ -15833,29 +15833,29 @@ impl serde::Serialize for UpdatePrivateKeyTagIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_tag_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.new_private_key_tag_name.is_some() {
+        if true {
             len += 1;
         }
-        if !self.add_private_key_ids.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.remove_private_key_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.UpdatePrivateKeyTagIntent", len)?;
-        if !self.private_key_tag_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyTagId", &self.private_key_tag_id)?;
         }
         if let Some(v) = self.new_private_key_tag_name.as_ref() {
             struct_ser.serialize_field("newPrivateKeyTagName", v)?;
         }
-        if !self.add_private_key_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("addPrivateKeyIds", &self.add_private_key_ids)?;
         }
-        if !self.remove_private_key_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("removePrivateKeyIds", &self.remove_private_key_ids)?;
         }
         struct_ser.end()
@@ -15979,11 +15979,11 @@ impl serde::Serialize for UpdatePrivateKeyTagResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_tag_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.UpdatePrivateKeyTagResult", len)?;
-        if !self.private_key_tag_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyTagId", &self.private_key_tag_id)?;
         }
         struct_ser.end()
@@ -16071,17 +16071,17 @@ impl serde::Serialize for UpdateRootQuorumIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.threshold != 0 {
+        if true {
             len += 1;
         }
-        if !self.user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.UpdateRootQuorumIntent", len)?;
-        if self.threshold != 0 {
+        if true {
             struct_ser.serialize_field("threshold", &self.threshold)?;
         }
-        if !self.user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userIds", &self.user_ids)?;
         }
         struct_ser.end()
@@ -16253,20 +16253,20 @@ impl serde::Serialize for UpdateUserIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.user_name.is_some() {
+        if true {
             len += 1;
         }
-        if self.user_email.is_some() {
+        if true {
             len += 1;
         }
-        if !self.user_tag_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.UpdateUserIntent", len)?;
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         if let Some(v) = self.user_name.as_ref() {
@@ -16275,7 +16275,7 @@ impl serde::Serialize for UpdateUserIntent {
         if let Some(v) = self.user_email.as_ref() {
             struct_ser.serialize_field("userEmail", v)?;
         }
-        if !self.user_tag_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userTagIds", &self.user_tag_ids)?;
         }
         struct_ser.end()
@@ -16399,11 +16399,11 @@ impl serde::Serialize for UpdateUserResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.UpdateUserResult", len)?;
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         struct_ser.end()
@@ -16491,29 +16491,29 @@ impl serde::Serialize for UpdateUserTagIntent {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_tag_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.new_user_tag_name.is_some() {
+        if true {
             len += 1;
         }
-        if !self.add_user_ids.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.remove_user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.UpdateUserTagIntent", len)?;
-        if !self.user_tag_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userTagId", &self.user_tag_id)?;
         }
         if let Some(v) = self.new_user_tag_name.as_ref() {
             struct_ser.serialize_field("newUserTagName", v)?;
         }
-        if !self.add_user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("addUserIds", &self.add_user_ids)?;
         }
-        if !self.remove_user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("removeUserIds", &self.remove_user_ids)?;
         }
         struct_ser.end()
@@ -16637,11 +16637,11 @@ impl serde::Serialize for UpdateUserTagResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_tag_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.UpdateUserTagResult", len)?;
-        if !self.user_tag_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userTagId", &self.user_tag_id)?;
         }
         struct_ser.end()
@@ -16729,43 +16729,43 @@ impl serde::Serialize for UserParams {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.user_email.is_some() {
+        if true {
             len += 1;
         }
-        if self.access_type != 0 {
+        if true {
             len += 1;
         }
-        if !self.api_keys.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.authenticators.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_tags.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.UserParams", len)?;
-        if !self.user_name.is_empty() {
+        if true {
             struct_ser.serialize_field("userName", &self.user_name)?;
         }
         if let Some(v) = self.user_email.as_ref() {
             struct_ser.serialize_field("userEmail", v)?;
         }
-        if self.access_type != 0 {
+        if true {
             let v = super::super::common::v1::AccessType::try_from(self.access_type)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.access_type)))?;
             struct_ser.serialize_field("accessType", &v)?;
         }
-        if !self.api_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeys", &self.api_keys)?;
         }
-        if !self.authenticators.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticators", &self.authenticators)?;
         }
-        if !self.user_tags.is_empty() {
+        if true {
             struct_ser.serialize_field("userTags", &self.user_tags)?;
         }
         struct_ser.end()
@@ -16912,35 +16912,35 @@ impl serde::Serialize for UserParamsV2 {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.user_email.is_some() {
+        if true {
             len += 1;
         }
-        if !self.api_keys.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.authenticators.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_tags.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.UserParamsV2", len)?;
-        if !self.user_name.is_empty() {
+        if true {
             struct_ser.serialize_field("userName", &self.user_name)?;
         }
         if let Some(v) = self.user_email.as_ref() {
             struct_ser.serialize_field("userEmail", v)?;
         }
-        if !self.api_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeys", &self.api_keys)?;
         }
-        if !self.authenticators.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticators", &self.authenticators)?;
         }
-        if !self.user_tags.is_empty() {
+        if true {
             struct_ser.serialize_field("userTags", &self.user_tags)?;
         }
         struct_ser.end()
@@ -17075,33 +17075,33 @@ impl serde::Serialize for WalletAccountParams {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.curve != 0 {
+        if true {
             len += 1;
         }
-        if self.path_format != 0 {
+        if true {
             len += 1;
         }
-        if !self.path.is_empty() {
+        if true {
             len += 1;
         }
-        if self.address_format != 0 {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.WalletAccountParams", len)?;
-        if self.curve != 0 {
+        if true {
             let v = super::super::common::v1::Curve::try_from(self.curve)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.curve)))?;
             struct_ser.serialize_field("curve", &v)?;
         }
-        if self.path_format != 0 {
+        if true {
             let v = super::super::common::v1::PathFormat::try_from(self.path_format)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.path_format)))?;
             struct_ser.serialize_field("pathFormat", &v)?;
         }
-        if !self.path.is_empty() {
+        if true {
             struct_ser.serialize_field("path", &self.path)?;
         }
-        if self.address_format != 0 {
+        if true {
             let v = super::super::common::v1::AddressFormat::try_from(self.address_format)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.address_format)))?;
             struct_ser.serialize_field("addressFormat", &v)?;
@@ -17225,20 +17225,20 @@ impl serde::Serialize for WalletParams {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.wallet_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.accounts.is_empty() {
+        if true {
             len += 1;
         }
-        if self.mnemonic_length.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.WalletParams", len)?;
-        if !self.wallet_name.is_empty() {
+        if true {
             struct_ser.serialize_field("walletName", &self.wallet_name)?;
         }
-        if !self.accounts.is_empty() {
+        if true {
             struct_ser.serialize_field("accounts", &self.accounts)?;
         }
         if let Some(v) = self.mnemonic_length.as_ref() {
@@ -17354,17 +17354,17 @@ impl serde::Serialize for WalletResult {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.wallet_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.addresses.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.activity.v1.WalletResult", len)?;
-        if !self.wallet_id.is_empty() {
+        if true {
             struct_ser.serialize_field("walletId", &self.wallet_id)?;
         }
-        if !self.addresses.is_empty() {
+        if true {
             struct_ser.serialize_field("addresses", &self.addresses)?;
         }
         struct_ser.end()

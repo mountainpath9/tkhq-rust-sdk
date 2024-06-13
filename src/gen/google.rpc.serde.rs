@@ -6,23 +6,23 @@ impl serde::Serialize for Status {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.code != 0 {
+        if true {
             len += 1;
         }
-        if !self.message.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.details.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("google.rpc.Status", len)?;
-        if self.code != 0 {
+        if true {
             struct_ser.serialize_field("code", &self.code)?;
         }
-        if !self.message.is_empty() {
+        if true {
             struct_ser.serialize_field("message", &self.message)?;
         }
-        if !self.details.is_empty() {
+        if true {
             struct_ser.serialize_field("details", &self.details)?;
         }
         struct_ser.end()

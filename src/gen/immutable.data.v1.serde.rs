@@ -6,17 +6,17 @@ impl serde::Serialize for Credential {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.public_key.is_empty() {
+        if true {
             len += 1;
         }
-        if self.r#type != 0 {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.data.v1.Credential", len)?;
-        if !self.public_key.is_empty() {
+        if true {
             struct_ser.serialize_field("publicKey", &self.public_key)?;
         }
-        if self.r#type != 0 {
+        if true {
             let v = super::super::common::v1::CredentialType::try_from(self.r#type)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.r#type)))?;
             struct_ser.serialize_field("type", &v)?;
@@ -117,14 +117,14 @@ impl serde::Serialize for Feature {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.name != 0 {
+        if true {
             len += 1;
         }
-        if self.value.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.data.v1.Feature", len)?;
-        if self.name != 0 {
+        if true {
             let v = super::super::common::v1::FeatureName::try_from(self.name)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.name)))?;
             struct_ser.serialize_field("name", &v)?;
@@ -227,17 +227,17 @@ impl serde::Serialize for Quorum {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.threshold != 0 {
+        if true {
             len += 1;
         }
-        if !self.user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.data.v1.Quorum", len)?;
-        if self.threshold != 0 {
+        if true {
             struct_ser.serialize_field("threshold", &self.threshold)?;
         }
-        if !self.user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userIds", &self.user_ids)?;
         }
         struct_ser.end()
@@ -338,17 +338,17 @@ impl serde::Serialize for Timestamp {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.seconds.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.nanos.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.data.v1.Timestamp", len)?;
-        if !self.seconds.is_empty() {
+        if true {
             struct_ser.serialize_field("seconds", &self.seconds)?;
         }
-        if !self.nanos.is_empty() {
+        if true {
             struct_ser.serialize_field("nanos", &self.nanos)?;
         }
         struct_ser.end()

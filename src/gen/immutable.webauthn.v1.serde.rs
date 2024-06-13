@@ -6,26 +6,26 @@ impl serde::Serialize for AuthenticatorAssertionResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.client_data_json.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.authenticator_data.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.signature.is_empty() {
+        if true {
             len += 1;
         }
-        if self.user_handle.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.webauthn.v1.AuthenticatorAssertionResponse", len)?;
-        if !self.client_data_json.is_empty() {
+        if true {
             struct_ser.serialize_field("clientDataJSON", &self.client_data_json)?;
         }
-        if !self.authenticator_data.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticatorData", &self.authenticator_data)?;
         }
-        if !self.signature.is_empty() {
+        if true {
             struct_ser.serialize_field("signature", &self.signature)?;
         }
         if let Some(v) = self.user_handle.as_ref() {
@@ -151,26 +151,26 @@ impl serde::Serialize for AuthenticatorAttestationResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.client_data_json.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.attestation_object.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.transports.is_empty() {
+        if true {
             len += 1;
         }
-        if self.authenticator_attachment.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.webauthn.v1.AuthenticatorAttestationResponse", len)?;
-        if !self.client_data_json.is_empty() {
+        if true {
             struct_ser.serialize_field("clientDataJson", &self.client_data_json)?;
         }
-        if !self.attestation_object.is_empty() {
+        if true {
             struct_ser.serialize_field("attestationObject", &self.attestation_object)?;
         }
-        if !self.transports.is_empty() {
+        if true {
             let v = self.transports.iter().cloned().map(|v| {
                 AuthenticatorTransport::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
@@ -383,11 +383,11 @@ impl serde::Serialize for CredPropsAuthenticationExtensionsClientOutputs {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.rk {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.webauthn.v1.CredPropsAuthenticationExtensionsClientOutputs", len)?;
-        if self.rk {
+        if true {
             struct_ser.serialize_field("rk", &self.rk)?;
         }
         struct_ser.end()
@@ -474,23 +474,23 @@ impl serde::Serialize for PublicKeyCredentialDescriptor {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.transports.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.webauthn.v1.PublicKeyCredentialDescriptor", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.id.is_empty() {
+        if true {
             struct_ser.serialize_field("id", &self.id)?;
         }
-        if !self.transports.is_empty() {
+        if true {
             let v = self.transports.iter().cloned().map(|v| {
                 AuthenticatorTransport::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
@@ -603,32 +603,32 @@ impl serde::Serialize for PublicKeyCredentialWithAssertion {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.raw_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.authenticator_attachment.is_some() {
+        if true {
             len += 1;
         }
-        if self.response.is_some() {
+        if true {
             len += 1;
         }
-        if self.client_extension_results.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.webauthn.v1.PublicKeyCredentialWithAssertion", len)?;
-        if !self.id.is_empty() {
+        if true {
             struct_ser.serialize_field("id", &self.id)?;
         }
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.raw_id.is_empty() {
+        if true {
             struct_ser.serialize_field("rawId", &self.raw_id)?;
         }
         if let Some(v) = self.authenticator_attachment.as_ref() {
@@ -782,32 +782,32 @@ impl serde::Serialize for PublicKeyCredentialWithAttestation {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.raw_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.authenticator_attachment.is_some() {
+        if true {
             len += 1;
         }
-        if self.response.is_some() {
+        if true {
             len += 1;
         }
-        if self.client_extension_results.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.webauthn.v1.PublicKeyCredentialWithAttestation", len)?;
-        if !self.id.is_empty() {
+        if true {
             struct_ser.serialize_field("id", &self.id)?;
         }
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.raw_id.is_empty() {
+        if true {
             struct_ser.serialize_field("rawId", &self.raw_id)?;
         }
         if let Some(v) = self.authenticator_attachment.as_ref() {
@@ -961,13 +961,13 @@ impl serde::Serialize for SimpleClientExtensionResults {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.appid.is_some() {
+        if true {
             len += 1;
         }
-        if self.appid_exclude.is_some() {
+        if true {
             len += 1;
         }
-        if self.cred_props.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("immutable.webauthn.v1.SimpleClientExtensionResults", len)?;

@@ -6,23 +6,23 @@ impl serde::Serialize for Contact {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.url.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.email.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.Contact", len)?;
-        if !self.name.is_empty() {
+        if true {
             struct_ser.serialize_field("name", &self.name)?;
         }
-        if !self.url.is_empty() {
+        if true {
             struct_ser.serialize_field("url", &self.url)?;
         }
-        if !self.email.is_empty() {
+        if true {
             struct_ser.serialize_field("email", &self.email)?;
         }
         struct_ser.end()
@@ -131,17 +131,17 @@ impl serde::Serialize for ExternalDocumentation {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.description.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.url.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.ExternalDocumentation", len)?;
-        if !self.description.is_empty() {
+        if true {
             struct_ser.serialize_field("description", &self.description)?;
         }
-        if !self.url.is_empty() {
+        if true {
             struct_ser.serialize_field("url", &self.url)?;
         }
         struct_ser.end()
@@ -239,35 +239,35 @@ impl serde::Serialize for Header {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.description.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.format.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.default.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.pattern.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.Header", len)?;
-        if !self.description.is_empty() {
+        if true {
             struct_ser.serialize_field("description", &self.description)?;
         }
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.format.is_empty() {
+        if true {
             struct_ser.serialize_field("format", &self.format)?;
         }
-        if !self.default.is_empty() {
+        if true {
             struct_ser.serialize_field("default", &self.default)?;
         }
-        if !self.pattern.is_empty() {
+        if true {
             struct_ser.serialize_field("pattern", &self.pattern)?;
         }
         struct_ser.end()
@@ -398,37 +398,37 @@ impl serde::Serialize for HeaderParameter {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.description.is_empty() {
+        if true {
             len += 1;
         }
-        if self.r#type != 0 {
+        if true {
             len += 1;
         }
-        if !self.format.is_empty() {
+        if true {
             len += 1;
         }
-        if self.required {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.HeaderParameter", len)?;
-        if !self.name.is_empty() {
+        if true {
             struct_ser.serialize_field("name", &self.name)?;
         }
-        if !self.description.is_empty() {
+        if true {
             struct_ser.serialize_field("description", &self.description)?;
         }
-        if self.r#type != 0 {
+        if true {
             let v = header_parameter::Type::try_from(self.r#type)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.r#type)))?;
             struct_ser.serialize_field("type", &v)?;
         }
-        if !self.format.is_empty() {
+        if true {
             struct_ser.serialize_field("format", &self.format)?;
         }
-        if self.required {
+        if true {
             struct_ser.serialize_field("required", &self.required)?;
         }
         struct_ser.end()
@@ -639,35 +639,35 @@ impl serde::Serialize for Info {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.title.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.description.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.terms_of_service.is_empty() {
+        if true {
             len += 1;
         }
-        if self.contact.is_some() {
+        if true {
             len += 1;
         }
-        if self.license.is_some() {
+        if true {
             len += 1;
         }
-        if !self.version.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.extensions.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.Info", len)?;
-        if !self.title.is_empty() {
+        if true {
             struct_ser.serialize_field("title", &self.title)?;
         }
-        if !self.description.is_empty() {
+        if true {
             struct_ser.serialize_field("description", &self.description)?;
         }
-        if !self.terms_of_service.is_empty() {
+        if true {
             struct_ser.serialize_field("termsOfService", &self.terms_of_service)?;
         }
         if let Some(v) = self.contact.as_ref() {
@@ -676,10 +676,10 @@ impl serde::Serialize for Info {
         if let Some(v) = self.license.as_ref() {
             struct_ser.serialize_field("license", v)?;
         }
-        if !self.version.is_empty() {
+        if true {
             struct_ser.serialize_field("version", &self.version)?;
         }
-        if !self.extensions.is_empty() {
+        if true {
             struct_ser.serialize_field("extensions", &self.extensions)?;
         }
         struct_ser.end()
@@ -835,171 +835,171 @@ impl serde::Serialize for JsonSchema {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#ref.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.title.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.description.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.default.is_empty() {
+        if true {
             len += 1;
         }
-        if self.read_only {
+        if true {
             len += 1;
         }
-        if !self.example.is_empty() {
+        if true {
             len += 1;
         }
-        if self.multiple_of != 0. {
+        if true {
             len += 1;
         }
-        if self.maximum != 0. {
+        if true {
             len += 1;
         }
-        if self.exclusive_maximum {
+        if true {
             len += 1;
         }
-        if self.minimum != 0. {
+        if true {
             len += 1;
         }
-        if self.exclusive_minimum {
+        if true {
             len += 1;
         }
-        if self.max_length != 0 {
+        if true {
             len += 1;
         }
-        if self.min_length != 0 {
+        if true {
             len += 1;
         }
-        if !self.pattern.is_empty() {
+        if true {
             len += 1;
         }
-        if self.max_items != 0 {
+        if true {
             len += 1;
         }
-        if self.min_items != 0 {
+        if true {
             len += 1;
         }
-        if self.unique_items {
+        if true {
             len += 1;
         }
-        if self.max_properties != 0 {
+        if true {
             len += 1;
         }
-        if self.min_properties != 0 {
+        if true {
             len += 1;
         }
-        if !self.required.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.array.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.format.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.r#enum.is_empty() {
+        if true {
             len += 1;
         }
-        if self.field_configuration.is_some() {
+        if true {
             len += 1;
         }
-        if !self.extensions.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.JSONSchema", len)?;
-        if !self.r#ref.is_empty() {
+        if true {
             struct_ser.serialize_field("ref", &self.r#ref)?;
         }
-        if !self.title.is_empty() {
+        if true {
             struct_ser.serialize_field("title", &self.title)?;
         }
-        if !self.description.is_empty() {
+        if true {
             struct_ser.serialize_field("description", &self.description)?;
         }
-        if !self.default.is_empty() {
+        if true {
             struct_ser.serialize_field("default", &self.default)?;
         }
-        if self.read_only {
+        if true {
             struct_ser.serialize_field("readOnly", &self.read_only)?;
         }
-        if !self.example.is_empty() {
+        if true {
             struct_ser.serialize_field("example", &self.example)?;
         }
-        if self.multiple_of != 0. {
+        if true {
             struct_ser.serialize_field("multipleOf", &self.multiple_of)?;
         }
-        if self.maximum != 0. {
+        if true {
             struct_ser.serialize_field("maximum", &self.maximum)?;
         }
-        if self.exclusive_maximum {
+        if true {
             struct_ser.serialize_field("exclusiveMaximum", &self.exclusive_maximum)?;
         }
-        if self.minimum != 0. {
+        if true {
             struct_ser.serialize_field("minimum", &self.minimum)?;
         }
-        if self.exclusive_minimum {
+        if true {
             struct_ser.serialize_field("exclusiveMinimum", &self.exclusive_minimum)?;
         }
-        if self.max_length != 0 {
+        if true {
             #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("maxLength", ToString::to_string(&self.max_length).as_str())?;
         }
-        if self.min_length != 0 {
+        if true {
             #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("minLength", ToString::to_string(&self.min_length).as_str())?;
         }
-        if !self.pattern.is_empty() {
+        if true {
             struct_ser.serialize_field("pattern", &self.pattern)?;
         }
-        if self.max_items != 0 {
+        if true {
             #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("maxItems", ToString::to_string(&self.max_items).as_str())?;
         }
-        if self.min_items != 0 {
+        if true {
             #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("minItems", ToString::to_string(&self.min_items).as_str())?;
         }
-        if self.unique_items {
+        if true {
             struct_ser.serialize_field("uniqueItems", &self.unique_items)?;
         }
-        if self.max_properties != 0 {
+        if true {
             #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("maxProperties", ToString::to_string(&self.max_properties).as_str())?;
         }
-        if self.min_properties != 0 {
+        if true {
             #[allow(clippy::needless_borrow)]
             struct_ser.serialize_field("minProperties", ToString::to_string(&self.min_properties).as_str())?;
         }
-        if !self.required.is_empty() {
+        if true {
             struct_ser.serialize_field("required", &self.required)?;
         }
-        if !self.array.is_empty() {
+        if true {
             struct_ser.serialize_field("array", &self.array)?;
         }
-        if !self.r#type.is_empty() {
+        if true {
             let v = self.r#type.iter().cloned().map(|v| {
                 json_schema::JsonSchemaSimpleTypes::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
                 }).collect::<std::result::Result<Vec<_>, _>>()?;
             struct_ser.serialize_field("type", &v)?;
         }
-        if !self.format.is_empty() {
+        if true {
             struct_ser.serialize_field("format", &self.format)?;
         }
-        if !self.r#enum.is_empty() {
+        if true {
             struct_ser.serialize_field("enum", &self.r#enum)?;
         }
         if let Some(v) = self.field_configuration.as_ref() {
             struct_ser.serialize_field("fieldConfiguration", v)?;
         }
-        if !self.extensions.is_empty() {
+        if true {
             struct_ser.serialize_field("extensions", &self.extensions)?;
         }
         struct_ser.end()
@@ -1393,11 +1393,11 @@ impl serde::Serialize for json_schema::FieldConfiguration {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.path_param_name.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration", len)?;
-        if !self.path_param_name.is_empty() {
+        if true {
             struct_ser.serialize_field("pathParamName", &self.path_param_name)?;
         }
         struct_ser.end()
@@ -1574,17 +1574,17 @@ impl serde::Serialize for License {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.url.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.License", len)?;
-        if !self.name.is_empty() {
+        if true {
             struct_ser.serialize_field("name", &self.name)?;
         }
-        if !self.url.is_empty() {
+        if true {
             struct_ser.serialize_field("url", &self.url)?;
         }
         struct_ser.end()
@@ -1682,84 +1682,84 @@ impl serde::Serialize for Operation {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.tags.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.summary.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.description.is_empty() {
+        if true {
             len += 1;
         }
-        if self.external_docs.is_some() {
+        if true {
             len += 1;
         }
-        if !self.operation_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.consumes.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.produces.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.responses.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.schemes.is_empty() {
+        if true {
             len += 1;
         }
-        if self.deprecated {
+        if true {
             len += 1;
         }
-        if !self.security.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.extensions.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.Operation", len)?;
-        if !self.tags.is_empty() {
+        if true {
             struct_ser.serialize_field("tags", &self.tags)?;
         }
-        if !self.summary.is_empty() {
+        if true {
             struct_ser.serialize_field("summary", &self.summary)?;
         }
-        if !self.description.is_empty() {
+        if true {
             struct_ser.serialize_field("description", &self.description)?;
         }
         if let Some(v) = self.external_docs.as_ref() {
             struct_ser.serialize_field("externalDocs", v)?;
         }
-        if !self.operation_id.is_empty() {
+        if true {
             struct_ser.serialize_field("operationId", &self.operation_id)?;
         }
-        if !self.consumes.is_empty() {
+        if true {
             struct_ser.serialize_field("consumes", &self.consumes)?;
         }
-        if !self.produces.is_empty() {
+        if true {
             struct_ser.serialize_field("produces", &self.produces)?;
         }
-        if !self.responses.is_empty() {
+        if true {
             struct_ser.serialize_field("responses", &self.responses)?;
         }
-        if !self.schemes.is_empty() {
+        if true {
             let v = self.schemes.iter().cloned().map(|v| {
                 Scheme::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
                 }).collect::<std::result::Result<Vec<_>, _>>()?;
             struct_ser.serialize_field("schemes", &v)?;
         }
-        if self.deprecated {
+        if true {
             struct_ser.serialize_field("deprecated", &self.deprecated)?;
         }
-        if !self.security.is_empty() {
+        if true {
             struct_ser.serialize_field("security", &self.security)?;
         }
-        if !self.extensions.is_empty() {
+        if true {
             struct_ser.serialize_field("extensions", &self.extensions)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -1987,11 +1987,11 @@ impl serde::Serialize for Parameters {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.headers.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.Parameters", len)?;
-        if !self.headers.is_empty() {
+        if true {
             struct_ser.serialize_field("headers", &self.headers)?;
         }
         struct_ser.end()
@@ -2078,35 +2078,35 @@ impl serde::Serialize for Response {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.description.is_empty() {
+        if true {
             len += 1;
         }
-        if self.schema.is_some() {
+        if true {
             len += 1;
         }
-        if !self.headers.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.examples.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.extensions.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.Response", len)?;
-        if !self.description.is_empty() {
+        if true {
             struct_ser.serialize_field("description", &self.description)?;
         }
         if let Some(v) = self.schema.as_ref() {
             struct_ser.serialize_field("schema", v)?;
         }
-        if !self.headers.is_empty() {
+        if true {
             struct_ser.serialize_field("headers", &self.headers)?;
         }
-        if !self.examples.is_empty() {
+        if true {
             struct_ser.serialize_field("examples", &self.examples)?;
         }
-        if !self.extensions.is_empty() {
+        if true {
             struct_ser.serialize_field("extensions", &self.extensions)?;
         }
         struct_ser.end()
@@ -2243,35 +2243,35 @@ impl serde::Serialize for Schema {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.json_schema.is_some() {
+        if true {
             len += 1;
         }
-        if !self.discriminator.is_empty() {
+        if true {
             len += 1;
         }
-        if self.read_only {
+        if true {
             len += 1;
         }
-        if self.external_docs.is_some() {
+        if true {
             len += 1;
         }
-        if !self.example.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.Schema", len)?;
         if let Some(v) = self.json_schema.as_ref() {
             struct_ser.serialize_field("jsonSchema", v)?;
         }
-        if !self.discriminator.is_empty() {
+        if true {
             struct_ser.serialize_field("discriminator", &self.discriminator)?;
         }
-        if self.read_only {
+        if true {
             struct_ser.serialize_field("readOnly", &self.read_only)?;
         }
         if let Some(v) = self.external_docs.as_ref() {
             struct_ser.serialize_field("externalDocs", v)?;
         }
-        if !self.example.is_empty() {
+        if true {
             struct_ser.serialize_field("example", &self.example)?;
         }
         struct_ser.end()
@@ -2485,11 +2485,11 @@ impl serde::Serialize for Scopes {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.scope.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.Scopes", len)?;
-        if !self.scope.is_empty() {
+        if true {
             struct_ser.serialize_field("scope", &self.scope)?;
         }
         struct_ser.end()
@@ -2578,11 +2578,11 @@ impl serde::Serialize for SecurityDefinitions {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.security.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions", len)?;
-        if !self.security.is_empty() {
+        if true {
             struct_ser.serialize_field("security", &self.security)?;
         }
         struct_ser.end()
@@ -2671,11 +2671,11 @@ impl serde::Serialize for SecurityRequirement {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.security_requirement.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement", len)?;
-        if !self.security_requirement.is_empty() {
+        if true {
             struct_ser.serialize_field("securityRequirement", &self.security_requirement)?;
         }
         struct_ser.end()
@@ -2765,11 +2765,11 @@ impl serde::Serialize for security_requirement::SecurityRequirementValue {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.scope.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue", len)?;
-        if !self.scope.is_empty() {
+        if true {
             struct_ser.serialize_field("scope", &self.scope)?;
         }
         struct_ser.end()
@@ -2856,65 +2856,65 @@ impl serde::Serialize for SecurityScheme {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.r#type != 0 {
+        if true {
             len += 1;
         }
-        if !self.description.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.r#in != 0 {
+        if true {
             len += 1;
         }
-        if self.flow != 0 {
+        if true {
             len += 1;
         }
-        if !self.authorization_url.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.token_url.is_empty() {
+        if true {
             len += 1;
         }
-        if self.scopes.is_some() {
+        if true {
             len += 1;
         }
-        if !self.extensions.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme", len)?;
-        if self.r#type != 0 {
+        if true {
             let v = security_scheme::Type::try_from(self.r#type)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.r#type)))?;
             struct_ser.serialize_field("type", &v)?;
         }
-        if !self.description.is_empty() {
+        if true {
             struct_ser.serialize_field("description", &self.description)?;
         }
-        if !self.name.is_empty() {
+        if true {
             struct_ser.serialize_field("name", &self.name)?;
         }
-        if self.r#in != 0 {
+        if true {
             let v = security_scheme::In::try_from(self.r#in)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.r#in)))?;
             struct_ser.serialize_field("in", &v)?;
         }
-        if self.flow != 0 {
+        if true {
             let v = security_scheme::Flow::try_from(self.flow)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.flow)))?;
             struct_ser.serialize_field("flow", &v)?;
         }
-        if !self.authorization_url.is_empty() {
+        if true {
             struct_ser.serialize_field("authorizationUrl", &self.authorization_url)?;
         }
-        if !self.token_url.is_empty() {
+        if true {
             struct_ser.serialize_field("tokenUrl", &self.token_url)?;
         }
         if let Some(v) = self.scopes.as_ref() {
             struct_ser.serialize_field("scopes", v)?;
         }
-        if !self.extensions.is_empty() {
+        if true {
             struct_ser.serialize_field("extensions", &self.extensions)?;
         }
         struct_ser.end()
@@ -3324,87 +3324,87 @@ impl serde::Serialize for Swagger {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.swagger.is_empty() {
+        if true {
             len += 1;
         }
-        if self.info.is_some() {
+        if true {
             len += 1;
         }
-        if !self.host.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.base_path.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.schemes.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.consumes.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.produces.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.responses.is_empty() {
+        if true {
             len += 1;
         }
-        if self.security_definitions.is_some() {
+        if true {
             len += 1;
         }
-        if !self.security.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.tags.is_empty() {
+        if true {
             len += 1;
         }
-        if self.external_docs.is_some() {
+        if true {
             len += 1;
         }
-        if !self.extensions.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.Swagger", len)?;
-        if !self.swagger.is_empty() {
+        if true {
             struct_ser.serialize_field("swagger", &self.swagger)?;
         }
         if let Some(v) = self.info.as_ref() {
             struct_ser.serialize_field("info", v)?;
         }
-        if !self.host.is_empty() {
+        if true {
             struct_ser.serialize_field("host", &self.host)?;
         }
-        if !self.base_path.is_empty() {
+        if true {
             struct_ser.serialize_field("basePath", &self.base_path)?;
         }
-        if !self.schemes.is_empty() {
+        if true {
             let v = self.schemes.iter().cloned().map(|v| {
                 Scheme::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
                 }).collect::<std::result::Result<Vec<_>, _>>()?;
             struct_ser.serialize_field("schemes", &v)?;
         }
-        if !self.consumes.is_empty() {
+        if true {
             struct_ser.serialize_field("consumes", &self.consumes)?;
         }
-        if !self.produces.is_empty() {
+        if true {
             struct_ser.serialize_field("produces", &self.produces)?;
         }
-        if !self.responses.is_empty() {
+        if true {
             struct_ser.serialize_field("responses", &self.responses)?;
         }
         if let Some(v) = self.security_definitions.as_ref() {
             struct_ser.serialize_field("securityDefinitions", v)?;
         }
-        if !self.security.is_empty() {
+        if true {
             struct_ser.serialize_field("security", &self.security)?;
         }
-        if !self.tags.is_empty() {
+        if true {
             struct_ser.serialize_field("tags", &self.tags)?;
         }
         if let Some(v) = self.external_docs.as_ref() {
             struct_ser.serialize_field("externalDocs", v)?;
         }
-        if !self.extensions.is_empty() {
+        if true {
             struct_ser.serialize_field("extensions", &self.extensions)?;
         }
         struct_ser.end()
@@ -3630,29 +3630,29 @@ impl serde::Serialize for Tag {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.description.is_empty() {
+        if true {
             len += 1;
         }
-        if self.external_docs.is_some() {
+        if true {
             len += 1;
         }
-        if !self.extensions.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("grpc.gateway.protoc_gen_openapiv2.options.Tag", len)?;
-        if !self.name.is_empty() {
+        if true {
             struct_ser.serialize_field("name", &self.name)?;
         }
-        if !self.description.is_empty() {
+        if true {
             struct_ser.serialize_field("description", &self.description)?;
         }
         if let Some(v) = self.external_docs.as_ref() {
             struct_ser.serialize_field("externalDocs", v)?;
         }
-        if !self.extensions.is_empty() {
+        if true {
             struct_ser.serialize_field("extensions", &self.extensions)?;
         }
         struct_ser.end()

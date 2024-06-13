@@ -6,23 +6,23 @@ impl serde::Serialize for Pagination {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.limit.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.before.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.after.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.options.v1.Pagination", len)?;
-        if !self.limit.is_empty() {
+        if true {
             struct_ser.serialize_field("limit", &self.limit)?;
         }
-        if !self.before.is_empty() {
+        if true {
             struct_ser.serialize_field("before", &self.before)?;
         }
-        if !self.after.is_empty() {
+        if true {
             struct_ser.serialize_field("after", &self.after)?;
         }
         struct_ser.end()

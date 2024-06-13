@@ -6,26 +6,26 @@ impl serde::Serialize for AcceptInvitationRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.AcceptInvitationRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -150,26 +150,26 @@ impl serde::Serialize for ActivateBillingTierRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.ActivateBillingTierRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -294,58 +294,58 @@ impl serde::Serialize for Activity {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.status != 0 {
+        if true {
             len += 1;
         }
-        if self.r#type != 0 {
+        if true {
             len += 1;
         }
-        if self.intent.is_some() {
+        if true {
             len += 1;
         }
-        if self.result.is_some() {
+        if true {
             len += 1;
         }
-        if !self.votes.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.fingerprint.is_empty() {
+        if true {
             len += 1;
         }
-        if self.can_approve {
+        if true {
             len += 1;
         }
-        if self.can_reject {
+        if true {
             len += 1;
         }
-        if self.created_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.updated_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.failure.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.Activity", len)?;
-        if !self.id.is_empty() {
+        if true {
             struct_ser.serialize_field("id", &self.id)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if self.status != 0 {
+        if true {
             let v = super::super::super::immutable::activity::v1::ActivityStatus::try_from(self.status)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.status)))?;
             struct_ser.serialize_field("status", &v)?;
         }
-        if self.r#type != 0 {
+        if true {
             let v = super::super::super::immutable::activity::v1::ActivityType::try_from(self.r#type)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.r#type)))?;
             struct_ser.serialize_field("type", &v)?;
@@ -356,16 +356,16 @@ impl serde::Serialize for Activity {
         if let Some(v) = self.result.as_ref() {
             struct_ser.serialize_field("result", v)?;
         }
-        if !self.votes.is_empty() {
+        if true {
             struct_ser.serialize_field("votes", &self.votes)?;
         }
-        if !self.fingerprint.is_empty() {
+        if true {
             struct_ser.serialize_field("fingerprint", &self.fingerprint)?;
         }
-        if self.can_approve {
+        if true {
             struct_ser.serialize_field("canApprove", &self.can_approve)?;
         }
-        if self.can_reject {
+        if true {
             struct_ser.serialize_field("canReject", &self.can_reject)?;
         }
         if let Some(v) = self.created_at.as_ref() {
@@ -598,26 +598,26 @@ impl serde::Serialize for ApproveActivityRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.ApproveActivityRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -742,26 +742,26 @@ impl serde::Serialize for CreateApiKeysRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreateApiKeysRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -886,26 +886,26 @@ impl serde::Serialize for CreateApiOnlyUsersRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreateApiOnlyUsersRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -1030,26 +1030,26 @@ impl serde::Serialize for CreateAuthenticatorsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreateAuthenticatorsRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -1174,26 +1174,26 @@ impl serde::Serialize for CreateInvitationsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreateInvitationsRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -1318,26 +1318,26 @@ impl serde::Serialize for CreateOrganizationRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreateOrganizationRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -1462,26 +1462,26 @@ impl serde::Serialize for CreatePoliciesRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreatePoliciesRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -1606,26 +1606,26 @@ impl serde::Serialize for CreatePolicyRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreatePolicyRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -1750,26 +1750,26 @@ impl serde::Serialize for CreatePrivateKeyTagRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreatePrivateKeyTagRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -1894,26 +1894,26 @@ impl serde::Serialize for CreatePrivateKeysRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreatePrivateKeysRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -2038,26 +2038,26 @@ impl serde::Serialize for CreateReadOnlySessionRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreateReadOnlySessionRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -2182,26 +2182,26 @@ impl serde::Serialize for CreateSubOrganizationRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreateSubOrganizationRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -2326,26 +2326,26 @@ impl serde::Serialize for CreateUserTagRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreateUserTagRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -2470,26 +2470,26 @@ impl serde::Serialize for CreateUsersRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreateUsersRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -2614,26 +2614,26 @@ impl serde::Serialize for CreateWalletAccountsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreateWalletAccountsRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -2758,26 +2758,26 @@ impl serde::Serialize for CreateWalletRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.CreateWalletRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -2902,26 +2902,26 @@ impl serde::Serialize for DeleteApiKeysRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.DeleteApiKeysRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -3046,26 +3046,26 @@ impl serde::Serialize for DeleteAuthenticatorsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.DeleteAuthenticatorsRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -3190,26 +3190,26 @@ impl serde::Serialize for DeleteInvitationRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.DeleteInvitationRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -3334,26 +3334,26 @@ impl serde::Serialize for DeleteOrganizationRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.DeleteOrganizationRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -3478,26 +3478,26 @@ impl serde::Serialize for DeletePaymentMethodRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.DeletePaymentMethodRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -3622,26 +3622,26 @@ impl serde::Serialize for DeletePolicyRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.DeletePolicyRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -3766,26 +3766,26 @@ impl serde::Serialize for DeletePrivateKeyTagsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.DeletePrivateKeyTagsRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -3910,26 +3910,26 @@ impl serde::Serialize for DeleteUserTagsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.DeleteUserTagsRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -4054,26 +4054,26 @@ impl serde::Serialize for DeleteUsersRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.DeleteUsersRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -4198,26 +4198,26 @@ impl serde::Serialize for EmailAuthRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.EmailAuthRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -4342,26 +4342,26 @@ impl serde::Serialize for ExportPrivateKeyRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.ExportPrivateKeyRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -4486,26 +4486,26 @@ impl serde::Serialize for ExportWalletAccountRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.ExportWalletAccountRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -4630,26 +4630,26 @@ impl serde::Serialize for ExportWalletRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.ExportWalletRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -4774,26 +4774,26 @@ impl serde::Serialize for ImportPrivateKeyRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.ImportPrivateKeyRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -4918,26 +4918,26 @@ impl serde::Serialize for ImportWalletRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.ImportWalletRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -5062,26 +5062,26 @@ impl serde::Serialize for InitImportPrivateKeyRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.InitImportPrivateKeyRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -5206,26 +5206,26 @@ impl serde::Serialize for InitImportWalletRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.InitImportWalletRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -5350,26 +5350,26 @@ impl serde::Serialize for InitUserEmailRecoveryRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.InitUserEmailRecoveryRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -5494,26 +5494,26 @@ impl serde::Serialize for RecoverUserRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.RecoverUserRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -5638,26 +5638,26 @@ impl serde::Serialize for RejectActivityRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.RejectActivityRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -5782,26 +5782,26 @@ impl serde::Serialize for RemoveOrganizationFeatureRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.RemoveOrganizationFeatureRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -5926,26 +5926,26 @@ impl serde::Serialize for SetOrganizationFeatureRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.SetOrganizationFeatureRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -6070,26 +6070,26 @@ impl serde::Serialize for SetPaymentMethodRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.SetPaymentMethodRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -6214,26 +6214,26 @@ impl serde::Serialize for SignRawPayloadRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.SignRawPayloadRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -6358,26 +6358,26 @@ impl serde::Serialize for SignRawPayloadsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.SignRawPayloadsRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -6502,26 +6502,26 @@ impl serde::Serialize for SignTransactionRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.SignTransactionRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -6646,26 +6646,26 @@ impl serde::Serialize for UpdateAllowedOriginsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.UpdateAllowedOriginsRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -6790,26 +6790,26 @@ impl serde::Serialize for UpdatePolicyRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.UpdatePolicyRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -6934,26 +6934,26 @@ impl serde::Serialize for UpdatePrivateKeyTagRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.UpdatePrivateKeyTagRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -7078,26 +7078,26 @@ impl serde::Serialize for UpdateRootQuorumRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.UpdateRootQuorumRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -7222,26 +7222,26 @@ impl serde::Serialize for UpdateUserRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.UpdateUserRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -7366,26 +7366,26 @@ impl serde::Serialize for UpdateUserTagRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.r#type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.parameters.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.UpdateUserTagRequest", len)?;
-        if !self.r#type.is_empty() {
+        if true {
             struct_ser.serialize_field("type", &self.r#type)?;
         }
-        if !self.timestamp_ms.is_empty() {
+        if true {
             struct_ser.serialize_field("timestampMs", &self.timestamp_ms)?;
         }
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.parameters.as_ref() {
@@ -7510,62 +7510,62 @@ impl serde::Serialize for Vote {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.user.is_some() {
+        if true {
             len += 1;
         }
-        if !self.activity_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.selection.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.message.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.public_key.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.signature.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.scheme.is_empty() {
+        if true {
             len += 1;
         }
-        if self.created_at.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.activity.v1.Vote", len)?;
-        if !self.id.is_empty() {
+        if true {
             struct_ser.serialize_field("id", &self.id)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         if let Some(v) = self.user.as_ref() {
             struct_ser.serialize_field("user", v)?;
         }
-        if !self.activity_id.is_empty() {
+        if true {
             struct_ser.serialize_field("activityId", &self.activity_id)?;
         }
-        if !self.selection.is_empty() {
+        if true {
             struct_ser.serialize_field("selection", &self.selection)?;
         }
-        if !self.message.is_empty() {
+        if true {
             struct_ser.serialize_field("message", &self.message)?;
         }
-        if !self.public_key.is_empty() {
+        if true {
             struct_ser.serialize_field("publicKey", &self.public_key)?;
         }
-        if !self.signature.is_empty() {
+        if true {
             struct_ser.serialize_field("signature", &self.signature)?;
         }
-        if !self.scheme.is_empty() {
+        if true {
             struct_ser.serialize_field("scheme", &self.scheme)?;
         }
         if let Some(v) = self.created_at.as_ref() {

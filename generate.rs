@@ -21,6 +21,7 @@ fn main() -> Result<()> {
     let descriptor_set = std::fs::read(descriptor_path)?;
     pbjson_build::Builder::new()
         .register_descriptors(&descriptor_set)?
+        .emit_fields()
         .build(&[
             ".external.activity.v1",
             ".external.data.v1",

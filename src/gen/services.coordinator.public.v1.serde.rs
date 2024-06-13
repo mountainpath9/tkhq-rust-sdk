@@ -6,7 +6,7 @@ impl serde::Serialize for ActivityResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.activity.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.ActivityResponse", len)?;
@@ -97,23 +97,23 @@ impl serde::Serialize for GetActivitiesRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.filter_by_status.is_empty() {
+        if true {
             len += 1;
         }
-        if self.pagination_options.is_some() {
+        if true {
             len += 1;
         }
-        if !self.filter_by_type.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetActivitiesRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.filter_by_status.is_empty() {
+        if true {
             let v = self.filter_by_status.iter().cloned().map(|v| {
                 super::super::super::super::immutable::activity::v1::ActivityStatus::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
@@ -123,7 +123,7 @@ impl serde::Serialize for GetActivitiesRequest {
         if let Some(v) = self.pagination_options.as_ref() {
             struct_ser.serialize_field("paginationOptions", v)?;
         }
-        if !self.filter_by_type.is_empty() {
+        if true {
             let v = self.filter_by_type.iter().cloned().map(|v| {
                 super::super::super::super::immutable::activity::v1::ActivityType::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
@@ -251,11 +251,11 @@ impl serde::Serialize for GetActivitiesResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.activities.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetActivitiesResponse", len)?;
-        if !self.activities.is_empty() {
+        if true {
             struct_ser.serialize_field("activities", &self.activities)?;
         }
         struct_ser.end()
@@ -342,17 +342,17 @@ impl serde::Serialize for GetActivityRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.activity_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetActivityRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.activity_id.is_empty() {
+        if true {
             struct_ser.serialize_field("activityId", &self.activity_id)?;
         }
         struct_ser.end()
@@ -452,17 +452,17 @@ impl serde::Serialize for GetApiKeyRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.api_key_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetApiKeyRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.api_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeyId", &self.api_key_id)?;
         }
         struct_ser.end()
@@ -562,7 +562,7 @@ impl serde::Serialize for GetApiKeyResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.api_key.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetApiKeyResponse", len)?;
@@ -654,14 +654,14 @@ impl serde::Serialize for GetApiKeysRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.user_id.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetApiKeysRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         if let Some(v) = self.user_id.as_ref() {
@@ -764,11 +764,11 @@ impl serde::Serialize for GetApiKeysResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.api_keys.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetApiKeysResponse", len)?;
-        if !self.api_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeys", &self.api_keys)?;
         }
         struct_ser.end()
@@ -856,17 +856,17 @@ impl serde::Serialize for GetAuthenticatorRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.authenticator_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetAuthenticatorRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.authenticator_id.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticatorId", &self.authenticator_id)?;
         }
         struct_ser.end()
@@ -966,7 +966,7 @@ impl serde::Serialize for GetAuthenticatorResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.authenticator.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetAuthenticatorResponse", len)?;
@@ -1057,17 +1057,17 @@ impl serde::Serialize for GetAuthenticatorsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetAuthenticatorsRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         struct_ser.end()
@@ -1167,11 +1167,11 @@ impl serde::Serialize for GetAuthenticatorsResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.authenticators.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetAuthenticatorsResponse", len)?;
-        if !self.authenticators.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticators", &self.authenticators)?;
         }
         struct_ser.end()
@@ -1258,11 +1258,11 @@ impl serde::Serialize for GetOrganizationRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetOrganizationRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         struct_ser.end()
@@ -1350,7 +1350,7 @@ impl serde::Serialize for GetOrganizationResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.organization_data.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetOrganizationResponse", len)?;
@@ -1442,11 +1442,11 @@ impl serde::Serialize for GetPoliciesRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetPoliciesRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         struct_ser.end()
@@ -1534,11 +1534,11 @@ impl serde::Serialize for GetPoliciesResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.policies.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetPoliciesResponse", len)?;
-        if !self.policies.is_empty() {
+        if true {
             struct_ser.serialize_field("policies", &self.policies)?;
         }
         struct_ser.end()
@@ -1625,17 +1625,17 @@ impl serde::Serialize for GetPolicyRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.policy_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetPolicyRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.policy_id.is_empty() {
+        if true {
             struct_ser.serialize_field("policyId", &self.policy_id)?;
         }
         struct_ser.end()
@@ -1735,7 +1735,7 @@ impl serde::Serialize for GetPolicyResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.policy.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetPolicyResponse", len)?;
@@ -1826,17 +1826,17 @@ impl serde::Serialize for GetPrivateKeyRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.private_key_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetPrivateKeyRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.private_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyId", &self.private_key_id)?;
         }
         struct_ser.end()
@@ -1936,7 +1936,7 @@ impl serde::Serialize for GetPrivateKeyResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.private_key.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetPrivateKeyResponse", len)?;
@@ -2028,11 +2028,11 @@ impl serde::Serialize for GetPrivateKeysRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetPrivateKeysRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         struct_ser.end()
@@ -2120,11 +2120,11 @@ impl serde::Serialize for GetPrivateKeysResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_keys.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetPrivateKeysResponse", len)?;
-        if !self.private_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeys", &self.private_keys)?;
         }
         struct_ser.end()
@@ -2212,26 +2212,26 @@ impl serde::Serialize for GetSubOrgIdsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.filter_type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.filter_value.is_empty() {
+        if true {
             len += 1;
         }
-        if self.pagination_options.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetSubOrgIdsRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.filter_type.is_empty() {
+        if true {
             struct_ser.serialize_field("filterType", &self.filter_type)?;
         }
-        if !self.filter_value.is_empty() {
+        if true {
             struct_ser.serialize_field("filterValue", &self.filter_value)?;
         }
         if let Some(v) = self.pagination_options.as_ref() {
@@ -2358,11 +2358,11 @@ impl serde::Serialize for GetSubOrgIdsResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetSubOrgIdsResponse", len)?;
-        if !self.organization_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationIds", &self.organization_ids)?;
         }
         struct_ser.end()
@@ -2450,17 +2450,17 @@ impl serde::Serialize for GetUserRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetUserRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
         struct_ser.end()
@@ -2560,7 +2560,7 @@ impl serde::Serialize for GetUserResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.user.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetUserResponse", len)?;
@@ -2651,11 +2651,11 @@ impl serde::Serialize for GetUsersRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetUsersRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         struct_ser.end()
@@ -2743,11 +2743,11 @@ impl serde::Serialize for GetUsersResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.users.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetUsersResponse", len)?;
-        if !self.users.is_empty() {
+        if true {
             struct_ser.serialize_field("users", &self.users)?;
         }
         struct_ser.end()
@@ -2834,20 +2834,20 @@ impl serde::Serialize for GetWalletAccountsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.wallet_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.pagination_options.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetWalletAccountsRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.wallet_id.is_empty() {
+        if true {
             struct_ser.serialize_field("walletId", &self.wallet_id)?;
         }
         if let Some(v) = self.pagination_options.as_ref() {
@@ -2962,11 +2962,11 @@ impl serde::Serialize for GetWalletAccountsResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.accounts.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetWalletAccountsResponse", len)?;
-        if !self.accounts.is_empty() {
+        if true {
             struct_ser.serialize_field("accounts", &self.accounts)?;
         }
         struct_ser.end()
@@ -3053,17 +3053,17 @@ impl serde::Serialize for GetWalletRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.wallet_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetWalletRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.wallet_id.is_empty() {
+        if true {
             struct_ser.serialize_field("walletId", &self.wallet_id)?;
         }
         struct_ser.end()
@@ -3163,7 +3163,7 @@ impl serde::Serialize for GetWalletResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.wallet.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetWalletResponse", len)?;
@@ -3254,11 +3254,11 @@ impl serde::Serialize for GetWalletsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetWalletsRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         struct_ser.end()
@@ -3346,11 +3346,11 @@ impl serde::Serialize for GetWalletsResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.wallets.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetWalletsResponse", len)?;
-        if !self.wallets.is_empty() {
+        if true {
             struct_ser.serialize_field("wallets", &self.wallets)?;
         }
         struct_ser.end()
@@ -3437,11 +3437,11 @@ impl serde::Serialize for GetWhoamiRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetWhoamiRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         struct_ser.end()
@@ -3529,29 +3529,29 @@ impl serde::Serialize for GetWhoamiResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.organization_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.username.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.GetWhoamiResponse", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.organization_name.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationName", &self.organization_name)?;
         }
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
-        if !self.username.is_empty() {
+        if true {
             struct_ser.serialize_field("username", &self.username)?;
         }
         struct_ser.end()
@@ -3674,11 +3674,11 @@ impl serde::Serialize for ListPrivateKeyTagsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.ListPrivateKeyTagsRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         struct_ser.end()
@@ -3766,11 +3766,11 @@ impl serde::Serialize for ListPrivateKeyTagsResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_tags.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.ListPrivateKeyTagsResponse", len)?;
-        if !self.private_key_tags.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyTags", &self.private_key_tags)?;
         }
         struct_ser.end()
@@ -3858,11 +3858,11 @@ impl serde::Serialize for ListUserTagsRequest {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.ListUserTagsRequest", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
         struct_ser.end()
@@ -3950,11 +3950,11 @@ impl serde::Serialize for ListUserTagsResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_tags.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.ListUserTagsResponse", len)?;
-        if !self.user_tags.is_empty() {
+        if true {
             struct_ser.serialize_field("userTags", &self.user_tags)?;
         }
         struct_ser.end()
@@ -4113,7 +4113,7 @@ impl serde::Serialize for NoopCodegenAnchorResponse {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.stamp.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("services.coordinator.public.v1.NOOPCodegenAnchorResponse", len)?;

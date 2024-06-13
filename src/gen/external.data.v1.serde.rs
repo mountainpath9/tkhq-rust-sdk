@@ -6,19 +6,19 @@ impl serde::Serialize for Address {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.format != 0 {
+        if true {
             len += 1;
         }
-        if !self.address.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.Address", len)?;
-        if self.format != 0 {
+        if true {
             let v = super::super::super::immutable::common::v1::AddressFormat::try_from(self.format)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.format)))?;
             struct_ser.serialize_field("format", &v)?;
         }
-        if !self.address.is_empty() {
+        if true {
             struct_ser.serialize_field("address", &self.address)?;
         }
         struct_ser.end()
@@ -116,32 +116,32 @@ impl serde::Serialize for ApiKey {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.credential.is_some() {
+        if true {
             len += 1;
         }
-        if !self.api_key_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.api_key_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.created_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.updated_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.expiration_seconds.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.ApiKey", len)?;
         if let Some(v) = self.credential.as_ref() {
             struct_ser.serialize_field("credential", v)?;
         }
-        if !self.api_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeyId", &self.api_key_id)?;
         }
-        if !self.api_key_name.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeyName", &self.api_key_name)?;
         }
         if let Some(v) = self.created_at.as_ref() {
@@ -300,63 +300,63 @@ impl serde::Serialize for Authenticator {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.transports.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.attestation_type.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.aaguid.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.credential_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.model.is_empty() {
+        if true {
             len += 1;
         }
-        if self.credential.is_some() {
+        if true {
             len += 1;
         }
-        if !self.authenticator_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.authenticator_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.created_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.updated_at.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.Authenticator", len)?;
-        if !self.transports.is_empty() {
+        if true {
             let v = self.transports.iter().cloned().map(|v| {
                 super::super::super::immutable::webauthn::v1::AuthenticatorTransport::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
                 }).collect::<std::result::Result<Vec<_>, _>>()?;
             struct_ser.serialize_field("transports", &v)?;
         }
-        if !self.attestation_type.is_empty() {
+        if true {
             struct_ser.serialize_field("attestationType", &self.attestation_type)?;
         }
-        if !self.aaguid.is_empty() {
+        if true {
             struct_ser.serialize_field("aaguid", &self.aaguid)?;
         }
-        if !self.credential_id.is_empty() {
+        if true {
             struct_ser.serialize_field("credentialId", &self.credential_id)?;
         }
-        if !self.model.is_empty() {
+        if true {
             struct_ser.serialize_field("model", &self.model)?;
         }
         if let Some(v) = self.credential.as_ref() {
             struct_ser.serialize_field("credential", v)?;
         }
-        if !self.authenticator_id.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticatorId", &self.authenticator_id)?;
         }
-        if !self.authenticator_name.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticatorName", &self.authenticator_name)?;
         }
         if let Some(v) = self.created_at.as_ref() {
@@ -554,17 +554,17 @@ impl serde::Serialize for Credential {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.public_key.is_empty() {
+        if true {
             len += 1;
         }
-        if self.r#type != 0 {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.Credential", len)?;
-        if !self.public_key.is_empty() {
+        if true {
             struct_ser.serialize_field("publicKey", &self.public_key)?;
         }
-        if self.r#type != 0 {
+        if true {
             let v = super::super::super::immutable::common::v1::CredentialType::try_from(self.r#type)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.r#type)))?;
             struct_ser.serialize_field("type", &v)?;
@@ -665,52 +665,52 @@ impl serde::Serialize for Invitation {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.invitation_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.receiver_user_name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.receiver_email.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.receiver_user_tags.is_empty() {
+        if true {
             len += 1;
         }
-        if self.access_type != 0 {
+        if true {
             len += 1;
         }
-        if self.status != 0 {
+        if true {
             len += 1;
         }
-        if self.created_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.updated_at.is_some() {
+        if true {
             len += 1;
         }
-        if !self.sender_user_id.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.Invitation", len)?;
-        if !self.invitation_id.is_empty() {
+        if true {
             struct_ser.serialize_field("invitationId", &self.invitation_id)?;
         }
-        if !self.receiver_user_name.is_empty() {
+        if true {
             struct_ser.serialize_field("receiverUserName", &self.receiver_user_name)?;
         }
-        if !self.receiver_email.is_empty() {
+        if true {
             struct_ser.serialize_field("receiverEmail", &self.receiver_email)?;
         }
-        if !self.receiver_user_tags.is_empty() {
+        if true {
             struct_ser.serialize_field("receiverUserTags", &self.receiver_user_tags)?;
         }
-        if self.access_type != 0 {
+        if true {
             let v = super::super::super::immutable::common::v1::AccessType::try_from(self.access_type)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.access_type)))?;
             struct_ser.serialize_field("accessType", &v)?;
         }
-        if self.status != 0 {
+        if true {
             let v = InvitationStatus::try_from(self.status)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.status)))?;
             struct_ser.serialize_field("status", &v)?;
@@ -721,7 +721,7 @@ impl serde::Serialize for Invitation {
         if let Some(v) = self.updated_at.as_ref() {
             struct_ser.serialize_field("updatedAt", v)?;
         }
-        if !self.sender_user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("senderUserId", &self.sender_user_id)?;
         }
         struct_ser.end()
@@ -981,65 +981,65 @@ impl serde::Serialize for OrganizationData {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.name.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.users.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.policies.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.private_keys.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.invitations.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.tags.is_empty() {
+        if true {
             len += 1;
         }
-        if self.root_quorum.is_some() {
+        if true {
             len += 1;
         }
-        if !self.features.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.wallets.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.OrganizationData", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.name.is_empty() {
+        if true {
             struct_ser.serialize_field("name", &self.name)?;
         }
-        if !self.users.is_empty() {
+        if true {
             struct_ser.serialize_field("users", &self.users)?;
         }
-        if !self.policies.is_empty() {
+        if true {
             struct_ser.serialize_field("policies", &self.policies)?;
         }
-        if !self.private_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeys", &self.private_keys)?;
         }
-        if !self.invitations.is_empty() {
+        if true {
             struct_ser.serialize_field("invitations", &self.invitations)?;
         }
-        if !self.tags.is_empty() {
+        if true {
             struct_ser.serialize_field("tags", &self.tags)?;
         }
         if let Some(v) = self.root_quorum.as_ref() {
             struct_ser.serialize_field("rootQuorum", v)?;
         }
-        if !self.features.is_empty() {
+        if true {
             struct_ser.serialize_field("features", &self.features)?;
         }
-        if !self.wallets.is_empty() {
+        if true {
             struct_ser.serialize_field("wallets", &self.wallets)?;
         }
         struct_ser.end()
@@ -1228,38 +1228,38 @@ impl serde::Serialize for Policy {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.policy_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.policy_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.effect != 0 {
+        if true {
             len += 1;
         }
-        if self.created_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.updated_at.is_some() {
+        if true {
             len += 1;
         }
-        if !self.notes.is_empty() {
+        if true {
             len += 1;
         }
-        if self.consensus.is_some() {
+        if true {
             len += 1;
         }
-        if self.condition.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.Policy", len)?;
-        if !self.policy_id.is_empty() {
+        if true {
             struct_ser.serialize_field("policyId", &self.policy_id)?;
         }
-        if !self.policy_name.is_empty() {
+        if true {
             struct_ser.serialize_field("policyName", &self.policy_name)?;
         }
-        if self.effect != 0 {
+        if true {
             let v = super::super::super::immutable::common::v1::Effect::try_from(self.effect)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.effect)))?;
             struct_ser.serialize_field("effect", &v)?;
@@ -1270,7 +1270,7 @@ impl serde::Serialize for Policy {
         if let Some(v) = self.updated_at.as_ref() {
             struct_ser.serialize_field("updatedAt", v)?;
         }
-        if !self.notes.is_empty() {
+        if true {
             struct_ser.serialize_field("notes", &self.notes)?;
         }
         if let Some(v) = self.consensus.as_ref() {
@@ -1444,55 +1444,55 @@ impl serde::Serialize for PrivateKey {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.private_key_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.public_key.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.private_key_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.curve != 0 {
+        if true {
             len += 1;
         }
-        if !self.addresses.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.private_key_tags.is_empty() {
+        if true {
             len += 1;
         }
-        if self.created_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.updated_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.exported {
+        if true {
             len += 1;
         }
-        if self.imported {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.PrivateKey", len)?;
-        if !self.private_key_id.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyId", &self.private_key_id)?;
         }
-        if !self.public_key.is_empty() {
+        if true {
             struct_ser.serialize_field("publicKey", &self.public_key)?;
         }
-        if !self.private_key_name.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyName", &self.private_key_name)?;
         }
-        if self.curve != 0 {
+        if true {
             let v = super::super::super::immutable::common::v1::Curve::try_from(self.curve)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.curve)))?;
             struct_ser.serialize_field("curve", &v)?;
         }
-        if !self.addresses.is_empty() {
+        if true {
             struct_ser.serialize_field("addresses", &self.addresses)?;
         }
-        if !self.private_key_tags.is_empty() {
+        if true {
             struct_ser.serialize_field("privateKeyTags", &self.private_key_tags)?;
         }
         if let Some(v) = self.created_at.as_ref() {
@@ -1501,10 +1501,10 @@ impl serde::Serialize for PrivateKey {
         if let Some(v) = self.updated_at.as_ref() {
             struct_ser.serialize_field("updatedAt", v)?;
         }
-        if self.exported {
+        if true {
             struct_ser.serialize_field("exported", &self.exported)?;
         }
-        if self.imported {
+        if true {
             struct_ser.serialize_field("imported", &self.imported)?;
         }
         struct_ser.end()
@@ -1696,17 +1696,17 @@ impl serde::Serialize for Quorum {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if self.threshold != 0 {
+        if true {
             len += 1;
         }
-        if !self.user_ids.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.Quorum", len)?;
-        if self.threshold != 0 {
+        if true {
             struct_ser.serialize_field("threshold", &self.threshold)?;
         }
-        if !self.user_ids.is_empty() {
+        if true {
             struct_ser.serialize_field("userIds", &self.user_ids)?;
         }
         struct_ser.end()
@@ -1807,29 +1807,29 @@ impl serde::Serialize for Tag {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.tag_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.tag_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.tag_type != 0 {
+        if true {
             len += 1;
         }
-        if self.created_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.updated_at.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.Tag", len)?;
-        if !self.tag_id.is_empty() {
+        if true {
             struct_ser.serialize_field("tagId", &self.tag_id)?;
         }
-        if !self.tag_name.is_empty() {
+        if true {
             struct_ser.serialize_field("tagName", &self.tag_name)?;
         }
-        if self.tag_type != 0 {
+        if true {
             let v = TagType::try_from(self.tag_type)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.tag_type)))?;
             struct_ser.serialize_field("tagType", &v)?;
@@ -2047,17 +2047,17 @@ impl serde::Serialize for Timestamp {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.seconds.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.nanos.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.Timestamp", len)?;
-        if !self.seconds.is_empty() {
+        if true {
             struct_ser.serialize_field("seconds", &self.seconds)?;
         }
-        if !self.nanos.is_empty() {
+        if true {
             struct_ser.serialize_field("nanos", &self.nanos)?;
         }
         struct_ser.end()
@@ -2155,47 +2155,47 @@ impl serde::Serialize for User {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.user_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.user_email.is_some() {
+        if true {
             len += 1;
         }
-        if !self.authenticators.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.api_keys.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.user_tags.is_empty() {
+        if true {
             len += 1;
         }
-        if self.created_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.updated_at.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.User", len)?;
-        if !self.user_id.is_empty() {
+        if true {
             struct_ser.serialize_field("userId", &self.user_id)?;
         }
-        if !self.user_name.is_empty() {
+        if true {
             struct_ser.serialize_field("userName", &self.user_name)?;
         }
         if let Some(v) = self.user_email.as_ref() {
             struct_ser.serialize_field("userEmail", v)?;
         }
-        if !self.authenticators.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticators", &self.authenticators)?;
         }
-        if !self.api_keys.is_empty() {
+        if true {
             struct_ser.serialize_field("apiKeys", &self.api_keys)?;
         }
-        if !self.user_tags.is_empty() {
+        if true {
             struct_ser.serialize_field("userTags", &self.user_tags)?;
         }
         if let Some(v) = self.created_at.as_ref() {
@@ -2372,29 +2372,29 @@ impl serde::Serialize for Wallet {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.wallet_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.wallet_name.is_empty() {
+        if true {
             len += 1;
         }
-        if self.created_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.updated_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.exported {
+        if true {
             len += 1;
         }
-        if self.imported {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.Wallet", len)?;
-        if !self.wallet_id.is_empty() {
+        if true {
             struct_ser.serialize_field("walletId", &self.wallet_id)?;
         }
-        if !self.wallet_name.is_empty() {
+        if true {
             struct_ser.serialize_field("walletName", &self.wallet_name)?;
         }
         if let Some(v) = self.created_at.as_ref() {
@@ -2403,10 +2403,10 @@ impl serde::Serialize for Wallet {
         if let Some(v) = self.updated_at.as_ref() {
             struct_ser.serialize_field("updatedAt", v)?;
         }
-        if self.exported {
+        if true {
             struct_ser.serialize_field("exported", &self.exported)?;
         }
-        if self.imported {
+        if true {
             struct_ser.serialize_field("imported", &self.imported)?;
         }
         struct_ser.end()
@@ -2552,59 +2552,59 @@ impl serde::Serialize for WalletAccount {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.organization_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.wallet_id.is_empty() {
+        if true {
             len += 1;
         }
-        if self.curve != 0 {
+        if true {
             len += 1;
         }
-        if self.path_format != 0 {
+        if true {
             len += 1;
         }
-        if !self.path.is_empty() {
+        if true {
             len += 1;
         }
-        if self.address_format != 0 {
+        if true {
             len += 1;
         }
-        if !self.address.is_empty() {
+        if true {
             len += 1;
         }
-        if self.created_at.is_some() {
+        if true {
             len += 1;
         }
-        if self.updated_at.is_some() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.data.v1.WalletAccount", len)?;
-        if !self.organization_id.is_empty() {
+        if true {
             struct_ser.serialize_field("organizationId", &self.organization_id)?;
         }
-        if !self.wallet_id.is_empty() {
+        if true {
             struct_ser.serialize_field("walletId", &self.wallet_id)?;
         }
-        if self.curve != 0 {
+        if true {
             let v = super::super::super::immutable::common::v1::Curve::try_from(self.curve)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.curve)))?;
             struct_ser.serialize_field("curve", &v)?;
         }
-        if self.path_format != 0 {
+        if true {
             let v = super::super::super::immutable::common::v1::PathFormat::try_from(self.path_format)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.path_format)))?;
             struct_ser.serialize_field("pathFormat", &v)?;
         }
-        if !self.path.is_empty() {
+        if true {
             struct_ser.serialize_field("path", &self.path)?;
         }
-        if self.address_format != 0 {
+        if true {
             let v = super::super::super::immutable::common::v1::AddressFormat::try_from(self.address_format)
                 .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", self.address_format)))?;
             struct_ser.serialize_field("addressFormat", &v)?;
         }
-        if !self.address.is_empty() {
+        if true {
             struct_ser.serialize_field("address", &self.address)?;
         }
         if let Some(v) = self.created_at.as_ref() {

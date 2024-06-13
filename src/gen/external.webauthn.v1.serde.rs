@@ -83,29 +83,29 @@ impl serde::Serialize for WebAuthnStamp {
     {
         use serde::ser::SerializeStruct;
         let mut len = 0;
-        if !self.credential_id.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.client_data_json.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.authenticator_data.is_empty() {
+        if true {
             len += 1;
         }
-        if !self.signature.is_empty() {
+        if true {
             len += 1;
         }
         let mut struct_ser = serializer.serialize_struct("external.webauthn.v1.WebAuthnStamp", len)?;
-        if !self.credential_id.is_empty() {
+        if true {
             struct_ser.serialize_field("credentialId", &self.credential_id)?;
         }
-        if !self.client_data_json.is_empty() {
+        if true {
             struct_ser.serialize_field("clientDataJson", &self.client_data_json)?;
         }
-        if !self.authenticator_data.is_empty() {
+        if true {
             struct_ser.serialize_field("authenticatorData", &self.authenticator_data)?;
         }
-        if !self.signature.is_empty() {
+        if true {
             struct_ser.serialize_field("signature", &self.signature)?;
         }
         struct_ser.end()
