@@ -23,6 +23,9 @@ prost-types = { version = "0.12.6" }
 prost-build = { version = "0.12.6", default-features = false, optional = true }
 reqwest = { version = "0.12.4", default-features = false, features = ["json"] }
 dotenv = "0.15.0"
+pbjson-build = "0.6.2"
+pbjson-types = "0.6.0"
+pbjson = "0.6.0"
 
 [features]
 build_deps = ["prost-build"]
