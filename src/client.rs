@@ -1,9 +1,9 @@
 use std::collections::HashMap;
 
 use crate::errors::{StampError, TurnkeyError};
+use crate::gen::services::coordinator::public::v1 as api;
 use base64::prelude::BASE64_URL_SAFE_NO_PAD;
 use base64::Engine;
-use dotenv::dotenv;
 use p256::ecdsa::signature::Signer;
 use p256::ecdsa::{Signature, SigningKey};
 use p256::FieldBytes;
@@ -30,7 +30,7 @@ pub struct StampInput<'a> {
 
 #[derive(Debug)]
 pub struct SealedRequestInput {
-    pub body: HashMap<String, Value>,
+    pub body: Value,
     pub public_key_hex: Option<String>,
     pub private_key_hex: Option<String>,
 }
@@ -69,34 +69,32 @@ pub enum QueryValueShape {
 }
 
 pub type HeadersShape = HashMap<String, String>;
-pub type BodyShape = HashMap<String, Value>;
+pub type BodyShape = Value;
 pub type QueryShape = HashMap<String, QueryValueShape>;
 pub type SubstitutionShape = HashMap<String, String>;
 pub type TurnkeyResult<T> = std::result::Result<T, TurnkeyError>;
 
-impl TurnkeyApiKey {
-    pub fn new() -> TurnkeyResult<Self> {
-        dotenv::dotenv().ok();
-
-        Ok(Self {
-            private_key_hex: env::var("TURNKEY_API_PRIVATE_KEY")
-                .map_err(|e| TurnkeyError::OtherError(e.to_string()))
-                .ok(),
-            public_key_hex: env::var("TURNKEY_API_PUBLIC_KEY")
-                .map_err(|e| TurnkeyError::OtherError(e.to_string()))
-                .ok(),
-        })
-    }
-}
-
 impl Turnkey {
-    pub fn new() -> TurnkeyResult<Self> {
-        dotenv().ok();
+    pub fn new(base_url: String, stamper: TurnkeyApiKey) -> Self {
+        Self {
+            base_url,
+            stamper,
+            client: Client::new(),
+        }
+    }
 
+    pub fn new_from_env() -> TurnkeyResult<Self> {
         Ok(Self {
             base_url: env::var("TURNKEY_BASE_URL")
                 .map_err(|e| TurnkeyError::OtherError(e.to_string()))?,
-            stamper: TurnkeyApiKey::new()?,
+            stamper: TurnkeyApiKey {
+                private_key_hex: env::var("TURNKEY_API_PRIVATE_KEY")
+                    .map_err(|e| TurnkeyError::OtherError(e.to_string()))
+                    .ok(),
+                public_key_hex: env::var("TURNKEY_API_PUBLIC_KEY")
+                    .map_err(|e| TurnkeyError::OtherError(e.to_string()))
+                    .ok(),
+            },
             client: Client::new(),
         })
     }
@@ -171,7 +169,26 @@ impl Turnkey {
         Ok(url)
     }
 
-    pub async fn request<ResponseData>(
+    pub async fn request<RPC>(&self, request_input: RPC::Request) -> TurnkeyResult<RPC::Response>
+    where
+        RPC: TurnkeyRpc,
+        RPC::Request: Serialize,
+        RPC::Response: DeserializeOwned,
+    {
+        let body = serde_json::to_value(request_input).expect("serilization to succeed");
+        let rinput = RequestInput {
+            uri: RPC::uri(),
+            method: "POST".to_owned(),
+            headers: None,
+            query: None,
+            body: Some(body),
+            substitution: None,
+        };
+        let resp = self.raw_request(rinput).await?;
+        Ok(resp)
+    }
+
+    async fn raw_request<ResponseData>(
         &self,
         request_input: RequestInput,
     ) -> TurnkeyResult<ResponseData>
@@ -264,4 +281,21 @@ impl Turnkey {
             x_stamp,
         })
     }
+}
+
+pub trait TurnkeyRpc {
+    fn uri() -> String;
+    type Request;
+    type Response;
+}
+
+pub struct GetWallets {}
+
+impl TurnkeyRpc for GetWallets {
+    fn uri() -> String {
+        "/public/v1/query/list_wallets".to_owned()
+    }
+
+    type Request = api::GetWalletsRequest;
+    type Response = api::GetWalletsResponse;
 }
