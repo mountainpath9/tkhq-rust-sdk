@@ -660,8 +660,7 @@ dependencies = [
 [[package]]
 name = "pbjson-build"
 version = "0.6.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2580e33f2292d34be285c5bc3dba5259542b083cfad6037b6d70345f24dcb735"
+source = "git+https://github.com/mountainpath9/pbjson.git?branch=mpath-fix-result-scoping#5607076a98db55bd714940a1e21deb2f356a8fcf"
 dependencies = [
  "heck 0.4.1",
  "itertools 0.11.0",

@@ -335,7 +335,7 @@ impl serde::Serialize for Authenticator {
             let v = self.transports.iter().cloned().map(|v| {
                 super::super::super::immutable::webauthn::v1::AuthenticatorTransport::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
-                }).collect::<Result<Vec<_>, _>>()?;
+                }).collect::<std::result::Result<Vec<_>, _>>()?;
             struct_ser.serialize_field("transports", &v)?;
         }
         if !self.attestation_type.is_empty() {

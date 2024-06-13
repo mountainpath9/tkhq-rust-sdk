@@ -987,7 +987,7 @@ impl serde::Serialize for JsonSchema {
             let v = self.r#type.iter().cloned().map(|v| {
                 json_schema::JsonSchemaSimpleTypes::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
-                }).collect::<Result<Vec<_>, _>>()?;
+                }).collect::<std::result::Result<Vec<_>, _>>()?;
             struct_ser.serialize_field("type", &v)?;
         }
         if !self.format.is_empty() {
@@ -1750,7 +1750,7 @@ impl serde::Serialize for Operation {
             let v = self.schemes.iter().cloned().map(|v| {
                 Scheme::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
-                }).collect::<Result<Vec<_>, _>>()?;
+                }).collect::<std::result::Result<Vec<_>, _>>()?;
             struct_ser.serialize_field("schemes", &v)?;
         }
         if self.deprecated {
@@ -3380,7 +3380,7 @@ impl serde::Serialize for Swagger {
             let v = self.schemes.iter().cloned().map(|v| {
                 Scheme::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
-                }).collect::<Result<Vec<_>, _>>()?;
+                }).collect::<std::result::Result<Vec<_>, _>>()?;
             struct_ser.serialize_field("schemes", &v)?;
         }
         if !self.consumes.is_empty() {

@@ -117,7 +117,7 @@ impl serde::Serialize for GetActivitiesRequest {
             let v = self.filter_by_status.iter().cloned().map(|v| {
                 super::super::super::super::immutable::activity::v1::ActivityStatus::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
-                }).collect::<Result<Vec<_>, _>>()?;
+                }).collect::<std::result::Result<Vec<_>, _>>()?;
             struct_ser.serialize_field("filterByStatus", &v)?;
         }
         if let Some(v) = self.pagination_options.as_ref() {
@@ -127,7 +127,7 @@ impl serde::Serialize for GetActivitiesRequest {
             let v = self.filter_by_type.iter().cloned().map(|v| {
                 super::super::super::super::immutable::activity::v1::ActivityType::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
-                }).collect::<Result<Vec<_>, _>>()?;
+                }).collect::<std::result::Result<Vec<_>, _>>()?;
             struct_ser.serialize_field("filterByType", &v)?;
         }
         struct_ser.end()

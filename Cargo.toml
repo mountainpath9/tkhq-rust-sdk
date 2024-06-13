@@ -32,3 +32,6 @@ build_deps = ["prost-build"]
 
 [dev-dependencies]
 tokio = { version = "1.38.0", features = ["full"] }
+
+[patch.crates-io]
+pbjson-build = { git = "https://github.com/mountainpath9/pbjson.git", branch="mpath-fix-result-scoping" }

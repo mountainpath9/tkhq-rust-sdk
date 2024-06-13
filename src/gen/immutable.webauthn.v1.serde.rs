@@ -174,7 +174,7 @@ impl serde::Serialize for AuthenticatorAttestationResponse {
             let v = self.transports.iter().cloned().map(|v| {
                 AuthenticatorTransport::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
-                }).collect::<Result<Vec<_>, _>>()?;
+                }).collect::<std::result::Result<Vec<_>, _>>()?;
             struct_ser.serialize_field("transports", &v)?;
         }
         if let Some(v) = self.authenticator_attachment.as_ref() {
@@ -494,7 +494,7 @@ impl serde::Serialize for PublicKeyCredentialDescriptor {
             let v = self.transports.iter().cloned().map(|v| {
                 AuthenticatorTransport::try_from(v)
                     .map_err(|_| serde::ser::Error::custom(format!("Invalid variant {}", v)))
-                }).collect::<Result<Vec<_>, _>>()?;
+                }).collect::<std::result::Result<Vec<_>, _>>()?;
             struct_ser.serialize_field("transports", &v)?;
         }
         struct_ser.end()
