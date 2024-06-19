@@ -159,13 +159,20 @@ impl TurnkeyClient {
 
         let status_response = response.error_for_status_ref().map(|_| ());
         match status_response {
-            Ok(_) => match response.json::<O>().await {
-                Ok(parsed) => Ok(parsed),
-                Err(e) => Err(TurnkeyError::OtherError(format!(
-                    "failed to parse response: {}",
-                    e.to_string()
-                ))),
-            },
+            Ok(_) => {
+                let text = response
+                    .text()
+                    .await
+                    .map_err(|e| TurnkeyError::HttpError(e))?;
+                let v = serde_json::from_str::<O>(&text).map_err(|e| {
+                    TurnkeyError::OtherError(format!(
+                        "failed to parse response, error = {}, body = {}",
+                        e.to_string(),
+                        text
+                    ))
+                })?;
+                Ok(v)
+            }
             Err(e) => {
                 let body = response.text().await.map_err(TurnkeyError::HttpError)?;
                 log::error!("request failed: {}, body: {}", e.status().unwrap(), body);
