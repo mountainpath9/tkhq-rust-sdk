@@ -56,6 +56,7 @@ impl<'de> serde::Deserialize<'de> for AuthenticatorAssertionResponse {
             AuthenticatorData,
             Signature,
             UserHandle,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -81,7 +82,7 @@ impl<'de> serde::Deserialize<'de> for AuthenticatorAssertionResponse {
                             "authenticatorData" | "authenticator_data" => Ok(GeneratedField::AuthenticatorData),
                             "signature" => Ok(GeneratedField::Signature),
                             "userHandle" | "user_handle" => Ok(GeneratedField::UserHandle),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -129,6 +130,9 @@ impl<'de> serde::Deserialize<'de> for AuthenticatorAssertionResponse {
                                 return Err(serde::de::Error::duplicate_field("userHandle"));
                             }
                             user_handle__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -205,6 +209,7 @@ impl<'de> serde::Deserialize<'de> for AuthenticatorAttestationResponse {
             AttestationObject,
             Transports,
             AuthenticatorAttachment,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -230,7 +235,7 @@ impl<'de> serde::Deserialize<'de> for AuthenticatorAttestationResponse {
                             "attestationObject" | "attestation_object" => Ok(GeneratedField::AttestationObject),
                             "transports" => Ok(GeneratedField::Transports),
                             "authenticatorAttachment" | "authenticator_attachment" => Ok(GeneratedField::AuthenticatorAttachment),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -278,6 +283,9 @@ impl<'de> serde::Deserialize<'de> for AuthenticatorAttestationResponse {
                                 return Err(serde::de::Error::duplicate_field("authenticatorAttachment"));
                             }
                             authenticator_attachment__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -406,6 +414,7 @@ impl<'de> serde::Deserialize<'de> for CredPropsAuthenticationExtensionsClientOut
         #[allow(clippy::enum_variant_names)]
         enum GeneratedField {
             Rk,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -428,7 +437,7 @@ impl<'de> serde::Deserialize<'de> for CredPropsAuthenticationExtensionsClientOut
                     {
                         match value {
                             "rk" => Ok(GeneratedField::Rk),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -455,6 +464,9 @@ impl<'de> serde::Deserialize<'de> for CredPropsAuthenticationExtensionsClientOut
                                 return Err(serde::de::Error::duplicate_field("rk"));
                             }
                             rk__ = Some(map_.next_value()?);
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -517,6 +529,7 @@ impl<'de> serde::Deserialize<'de> for PublicKeyCredentialDescriptor {
             Type,
             Id,
             Transports,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -541,7 +554,7 @@ impl<'de> serde::Deserialize<'de> for PublicKeyCredentialDescriptor {
                             "type" => Ok(GeneratedField::Type),
                             "id" => Ok(GeneratedField::Id),
                             "transports" => Ok(GeneratedField::Transports),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -582,6 +595,9 @@ impl<'de> serde::Deserialize<'de> for PublicKeyCredentialDescriptor {
                                 return Err(serde::de::Error::duplicate_field("transports"));
                             }
                             transports__ = Some(map_.next_value::<Vec<AuthenticatorTransport>>()?.into_iter().map(|x| x as i32).collect());
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -669,6 +685,7 @@ impl<'de> serde::Deserialize<'de> for PublicKeyCredentialWithAssertion {
             AuthenticatorAttachment,
             Response,
             ClientExtensionResults,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -696,7 +713,7 @@ impl<'de> serde::Deserialize<'de> for PublicKeyCredentialWithAssertion {
                             "authenticatorAttachment" | "authenticator_attachment" => Ok(GeneratedField::AuthenticatorAttachment),
                             "response" => Ok(GeneratedField::Response),
                             "clientExtensionResults" | "client_extension_results" => Ok(GeneratedField::ClientExtensionResults),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -758,6 +775,9 @@ impl<'de> serde::Deserialize<'de> for PublicKeyCredentialWithAssertion {
                                 return Err(serde::de::Error::duplicate_field("clientExtensionResults"));
                             }
                             client_extension_results__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -848,6 +868,7 @@ impl<'de> serde::Deserialize<'de> for PublicKeyCredentialWithAttestation {
             AuthenticatorAttachment,
             Response,
             ClientExtensionResults,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -875,7 +896,7 @@ impl<'de> serde::Deserialize<'de> for PublicKeyCredentialWithAttestation {
                             "authenticatorAttachment" | "authenticator_attachment" => Ok(GeneratedField::AuthenticatorAttachment),
                             "response" => Ok(GeneratedField::Response),
                             "clientExtensionResults" | "client_extension_results" => Ok(GeneratedField::ClientExtensionResults),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -937,6 +958,9 @@ impl<'de> serde::Deserialize<'de> for PublicKeyCredentialWithAttestation {
                                 return Err(serde::de::Error::duplicate_field("clientExtensionResults"));
                             }
                             client_extension_results__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -1002,6 +1026,7 @@ impl<'de> serde::Deserialize<'de> for SimpleClientExtensionResults {
             Appid,
             AppidExclude,
             CredProps,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -1026,7 +1051,7 @@ impl<'de> serde::Deserialize<'de> for SimpleClientExtensionResults {
                             "appid" => Ok(GeneratedField::Appid),
                             "appidExclude" | "appid_exclude" => Ok(GeneratedField::AppidExclude),
                             "credProps" | "cred_props" => Ok(GeneratedField::CredProps),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -1067,6 +1092,9 @@ impl<'de> serde::Deserialize<'de> for SimpleClientExtensionResults {
                                 return Err(serde::de::Error::duplicate_field("credProps"));
                             }
                             cred_props__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }

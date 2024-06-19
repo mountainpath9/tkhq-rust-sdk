@@ -55,6 +55,7 @@ impl<'de> serde::Deserialize<'de> for AcceptInvitationRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -80,7 +81,7 @@ impl<'de> serde::Deserialize<'de> for AcceptInvitationRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -128,6 +129,9 @@ impl<'de> serde::Deserialize<'de> for AcceptInvitationRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -199,6 +203,7 @@ impl<'de> serde::Deserialize<'de> for ActivateBillingTierRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -224,7 +229,7 @@ impl<'de> serde::Deserialize<'de> for ActivateBillingTierRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -272,6 +277,9 @@ impl<'de> serde::Deserialize<'de> for ActivateBillingTierRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -422,6 +430,7 @@ impl<'de> serde::Deserialize<'de> for Activity {
             CreatedAt,
             UpdatedAt,
             Failure,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -456,7 +465,7 @@ impl<'de> serde::Deserialize<'de> for Activity {
                             "createdAt" | "created_at" => Ok(GeneratedField::CreatedAt),
                             "updatedAt" | "updated_at" => Ok(GeneratedField::UpdatedAt),
                             "failure" => Ok(GeneratedField::Failure),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -568,6 +577,9 @@ impl<'de> serde::Deserialize<'de> for Activity {
                             }
                             failure__ = map_.next_value()?;
                         }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
+                        }
                     }
                 }
                 Ok(Activity {
@@ -647,6 +659,7 @@ impl<'de> serde::Deserialize<'de> for ApproveActivityRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -672,7 +685,7 @@ impl<'de> serde::Deserialize<'de> for ApproveActivityRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -720,6 +733,9 @@ impl<'de> serde::Deserialize<'de> for ApproveActivityRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -791,6 +807,7 @@ impl<'de> serde::Deserialize<'de> for CreateApiKeysRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -816,7 +833,7 @@ impl<'de> serde::Deserialize<'de> for CreateApiKeysRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -864,6 +881,9 @@ impl<'de> serde::Deserialize<'de> for CreateApiKeysRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -935,6 +955,7 @@ impl<'de> serde::Deserialize<'de> for CreateApiOnlyUsersRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -960,7 +981,7 @@ impl<'de> serde::Deserialize<'de> for CreateApiOnlyUsersRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -1008,6 +1029,9 @@ impl<'de> serde::Deserialize<'de> for CreateApiOnlyUsersRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -1079,6 +1103,7 @@ impl<'de> serde::Deserialize<'de> for CreateAuthenticatorsRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -1104,7 +1129,7 @@ impl<'de> serde::Deserialize<'de> for CreateAuthenticatorsRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -1152,6 +1177,9 @@ impl<'de> serde::Deserialize<'de> for CreateAuthenticatorsRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -1223,6 +1251,7 @@ impl<'de> serde::Deserialize<'de> for CreateInvitationsRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -1248,7 +1277,7 @@ impl<'de> serde::Deserialize<'de> for CreateInvitationsRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -1296,6 +1325,9 @@ impl<'de> serde::Deserialize<'de> for CreateInvitationsRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -1367,6 +1399,7 @@ impl<'de> serde::Deserialize<'de> for CreateOrganizationRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -1392,7 +1425,7 @@ impl<'de> serde::Deserialize<'de> for CreateOrganizationRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -1440,6 +1473,9 @@ impl<'de> serde::Deserialize<'de> for CreateOrganizationRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -1511,6 +1547,7 @@ impl<'de> serde::Deserialize<'de> for CreatePoliciesRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -1536,7 +1573,7 @@ impl<'de> serde::Deserialize<'de> for CreatePoliciesRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -1584,6 +1621,9 @@ impl<'de> serde::Deserialize<'de> for CreatePoliciesRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -1655,6 +1695,7 @@ impl<'de> serde::Deserialize<'de> for CreatePolicyRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -1680,7 +1721,7 @@ impl<'de> serde::Deserialize<'de> for CreatePolicyRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -1728,6 +1769,9 @@ impl<'de> serde::Deserialize<'de> for CreatePolicyRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -1799,6 +1843,7 @@ impl<'de> serde::Deserialize<'de> for CreatePrivateKeyTagRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -1824,7 +1869,7 @@ impl<'de> serde::Deserialize<'de> for CreatePrivateKeyTagRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -1872,6 +1917,9 @@ impl<'de> serde::Deserialize<'de> for CreatePrivateKeyTagRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -1943,6 +1991,7 @@ impl<'de> serde::Deserialize<'de> for CreatePrivateKeysRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -1968,7 +2017,7 @@ impl<'de> serde::Deserialize<'de> for CreatePrivateKeysRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -2016,6 +2065,9 @@ impl<'de> serde::Deserialize<'de> for CreatePrivateKeysRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -2087,6 +2139,7 @@ impl<'de> serde::Deserialize<'de> for CreateReadOnlySessionRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -2112,7 +2165,7 @@ impl<'de> serde::Deserialize<'de> for CreateReadOnlySessionRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -2160,6 +2213,9 @@ impl<'de> serde::Deserialize<'de> for CreateReadOnlySessionRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -2231,6 +2287,7 @@ impl<'de> serde::Deserialize<'de> for CreateSubOrganizationRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -2256,7 +2313,7 @@ impl<'de> serde::Deserialize<'de> for CreateSubOrganizationRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -2304,6 +2361,9 @@ impl<'de> serde::Deserialize<'de> for CreateSubOrganizationRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -2375,6 +2435,7 @@ impl<'de> serde::Deserialize<'de> for CreateUserTagRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -2400,7 +2461,7 @@ impl<'de> serde::Deserialize<'de> for CreateUserTagRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -2448,6 +2509,9 @@ impl<'de> serde::Deserialize<'de> for CreateUserTagRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -2519,6 +2583,7 @@ impl<'de> serde::Deserialize<'de> for CreateUsersRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -2544,7 +2609,7 @@ impl<'de> serde::Deserialize<'de> for CreateUsersRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -2592,6 +2657,9 @@ impl<'de> serde::Deserialize<'de> for CreateUsersRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -2663,6 +2731,7 @@ impl<'de> serde::Deserialize<'de> for CreateWalletAccountsRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -2688,7 +2757,7 @@ impl<'de> serde::Deserialize<'de> for CreateWalletAccountsRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -2736,6 +2805,9 @@ impl<'de> serde::Deserialize<'de> for CreateWalletAccountsRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -2807,6 +2879,7 @@ impl<'de> serde::Deserialize<'de> for CreateWalletRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -2832,7 +2905,7 @@ impl<'de> serde::Deserialize<'de> for CreateWalletRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -2880,6 +2953,9 @@ impl<'de> serde::Deserialize<'de> for CreateWalletRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -2951,6 +3027,7 @@ impl<'de> serde::Deserialize<'de> for DeleteApiKeysRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -2976,7 +3053,7 @@ impl<'de> serde::Deserialize<'de> for DeleteApiKeysRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -3024,6 +3101,9 @@ impl<'de> serde::Deserialize<'de> for DeleteApiKeysRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -3095,6 +3175,7 @@ impl<'de> serde::Deserialize<'de> for DeleteAuthenticatorsRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -3120,7 +3201,7 @@ impl<'de> serde::Deserialize<'de> for DeleteAuthenticatorsRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -3168,6 +3249,9 @@ impl<'de> serde::Deserialize<'de> for DeleteAuthenticatorsRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -3239,6 +3323,7 @@ impl<'de> serde::Deserialize<'de> for DeleteInvitationRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -3264,7 +3349,7 @@ impl<'de> serde::Deserialize<'de> for DeleteInvitationRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -3312,6 +3397,9 @@ impl<'de> serde::Deserialize<'de> for DeleteInvitationRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -3383,6 +3471,7 @@ impl<'de> serde::Deserialize<'de> for DeleteOrganizationRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -3408,7 +3497,7 @@ impl<'de> serde::Deserialize<'de> for DeleteOrganizationRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -3456,6 +3545,9 @@ impl<'de> serde::Deserialize<'de> for DeleteOrganizationRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -3527,6 +3619,7 @@ impl<'de> serde::Deserialize<'de> for DeletePaymentMethodRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -3552,7 +3645,7 @@ impl<'de> serde::Deserialize<'de> for DeletePaymentMethodRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -3600,6 +3693,9 @@ impl<'de> serde::Deserialize<'de> for DeletePaymentMethodRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -3671,6 +3767,7 @@ impl<'de> serde::Deserialize<'de> for DeletePolicyRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -3696,7 +3793,7 @@ impl<'de> serde::Deserialize<'de> for DeletePolicyRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -3744,6 +3841,9 @@ impl<'de> serde::Deserialize<'de> for DeletePolicyRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -3815,6 +3915,7 @@ impl<'de> serde::Deserialize<'de> for DeletePrivateKeyTagsRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -3840,7 +3941,7 @@ impl<'de> serde::Deserialize<'de> for DeletePrivateKeyTagsRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -3888,6 +3989,9 @@ impl<'de> serde::Deserialize<'de> for DeletePrivateKeyTagsRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -3959,6 +4063,7 @@ impl<'de> serde::Deserialize<'de> for DeleteUserTagsRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -3984,7 +4089,7 @@ impl<'de> serde::Deserialize<'de> for DeleteUserTagsRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -4032,6 +4137,9 @@ impl<'de> serde::Deserialize<'de> for DeleteUserTagsRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -4103,6 +4211,7 @@ impl<'de> serde::Deserialize<'de> for DeleteUsersRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -4128,7 +4237,7 @@ impl<'de> serde::Deserialize<'de> for DeleteUsersRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -4176,6 +4285,9 @@ impl<'de> serde::Deserialize<'de> for DeleteUsersRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -4247,6 +4359,7 @@ impl<'de> serde::Deserialize<'de> for EmailAuthRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -4272,7 +4385,7 @@ impl<'de> serde::Deserialize<'de> for EmailAuthRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -4320,6 +4433,9 @@ impl<'de> serde::Deserialize<'de> for EmailAuthRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -4391,6 +4507,7 @@ impl<'de> serde::Deserialize<'de> for ExportPrivateKeyRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -4416,7 +4533,7 @@ impl<'de> serde::Deserialize<'de> for ExportPrivateKeyRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -4464,6 +4581,9 @@ impl<'de> serde::Deserialize<'de> for ExportPrivateKeyRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -4535,6 +4655,7 @@ impl<'de> serde::Deserialize<'de> for ExportWalletAccountRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -4560,7 +4681,7 @@ impl<'de> serde::Deserialize<'de> for ExportWalletAccountRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -4608,6 +4729,9 @@ impl<'de> serde::Deserialize<'de> for ExportWalletAccountRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -4679,6 +4803,7 @@ impl<'de> serde::Deserialize<'de> for ExportWalletRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -4704,7 +4829,7 @@ impl<'de> serde::Deserialize<'de> for ExportWalletRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -4752,6 +4877,9 @@ impl<'de> serde::Deserialize<'de> for ExportWalletRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -4823,6 +4951,7 @@ impl<'de> serde::Deserialize<'de> for ImportPrivateKeyRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -4848,7 +4977,7 @@ impl<'de> serde::Deserialize<'de> for ImportPrivateKeyRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -4896,6 +5025,9 @@ impl<'de> serde::Deserialize<'de> for ImportPrivateKeyRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -4967,6 +5099,7 @@ impl<'de> serde::Deserialize<'de> for ImportWalletRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -4992,7 +5125,7 @@ impl<'de> serde::Deserialize<'de> for ImportWalletRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -5040,6 +5173,9 @@ impl<'de> serde::Deserialize<'de> for ImportWalletRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -5111,6 +5247,7 @@ impl<'de> serde::Deserialize<'de> for InitImportPrivateKeyRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -5136,7 +5273,7 @@ impl<'de> serde::Deserialize<'de> for InitImportPrivateKeyRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -5184,6 +5321,9 @@ impl<'de> serde::Deserialize<'de> for InitImportPrivateKeyRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -5255,6 +5395,7 @@ impl<'de> serde::Deserialize<'de> for InitImportWalletRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -5280,7 +5421,7 @@ impl<'de> serde::Deserialize<'de> for InitImportWalletRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -5328,6 +5469,9 @@ impl<'de> serde::Deserialize<'de> for InitImportWalletRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -5399,6 +5543,7 @@ impl<'de> serde::Deserialize<'de> for InitUserEmailRecoveryRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -5424,7 +5569,7 @@ impl<'de> serde::Deserialize<'de> for InitUserEmailRecoveryRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -5472,6 +5617,9 @@ impl<'de> serde::Deserialize<'de> for InitUserEmailRecoveryRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -5543,6 +5691,7 @@ impl<'de> serde::Deserialize<'de> for RecoverUserRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -5568,7 +5717,7 @@ impl<'de> serde::Deserialize<'de> for RecoverUserRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -5616,6 +5765,9 @@ impl<'de> serde::Deserialize<'de> for RecoverUserRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -5687,6 +5839,7 @@ impl<'de> serde::Deserialize<'de> for RejectActivityRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -5712,7 +5865,7 @@ impl<'de> serde::Deserialize<'de> for RejectActivityRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -5760,6 +5913,9 @@ impl<'de> serde::Deserialize<'de> for RejectActivityRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -5831,6 +5987,7 @@ impl<'de> serde::Deserialize<'de> for RemoveOrganizationFeatureRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -5856,7 +6013,7 @@ impl<'de> serde::Deserialize<'de> for RemoveOrganizationFeatureRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -5904,6 +6061,9 @@ impl<'de> serde::Deserialize<'de> for RemoveOrganizationFeatureRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -5975,6 +6135,7 @@ impl<'de> serde::Deserialize<'de> for SetOrganizationFeatureRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -6000,7 +6161,7 @@ impl<'de> serde::Deserialize<'de> for SetOrganizationFeatureRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -6048,6 +6209,9 @@ impl<'de> serde::Deserialize<'de> for SetOrganizationFeatureRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -6119,6 +6283,7 @@ impl<'de> serde::Deserialize<'de> for SetPaymentMethodRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -6144,7 +6309,7 @@ impl<'de> serde::Deserialize<'de> for SetPaymentMethodRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -6192,6 +6357,9 @@ impl<'de> serde::Deserialize<'de> for SetPaymentMethodRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -6263,6 +6431,7 @@ impl<'de> serde::Deserialize<'de> for SignRawPayloadRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -6288,7 +6457,7 @@ impl<'de> serde::Deserialize<'de> for SignRawPayloadRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -6336,6 +6505,9 @@ impl<'de> serde::Deserialize<'de> for SignRawPayloadRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -6407,6 +6579,7 @@ impl<'de> serde::Deserialize<'de> for SignRawPayloadsRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -6432,7 +6605,7 @@ impl<'de> serde::Deserialize<'de> for SignRawPayloadsRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -6480,6 +6653,9 @@ impl<'de> serde::Deserialize<'de> for SignRawPayloadsRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -6551,6 +6727,7 @@ impl<'de> serde::Deserialize<'de> for SignTransactionRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -6576,7 +6753,7 @@ impl<'de> serde::Deserialize<'de> for SignTransactionRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -6624,6 +6801,9 @@ impl<'de> serde::Deserialize<'de> for SignTransactionRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -6695,6 +6875,7 @@ impl<'de> serde::Deserialize<'de> for UpdateAllowedOriginsRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -6720,7 +6901,7 @@ impl<'de> serde::Deserialize<'de> for UpdateAllowedOriginsRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -6768,6 +6949,9 @@ impl<'de> serde::Deserialize<'de> for UpdateAllowedOriginsRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -6839,6 +7023,7 @@ impl<'de> serde::Deserialize<'de> for UpdatePolicyRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -6864,7 +7049,7 @@ impl<'de> serde::Deserialize<'de> for UpdatePolicyRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -6912,6 +7097,9 @@ impl<'de> serde::Deserialize<'de> for UpdatePolicyRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -6983,6 +7171,7 @@ impl<'de> serde::Deserialize<'de> for UpdatePrivateKeyTagRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -7008,7 +7197,7 @@ impl<'de> serde::Deserialize<'de> for UpdatePrivateKeyTagRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -7056,6 +7245,9 @@ impl<'de> serde::Deserialize<'de> for UpdatePrivateKeyTagRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -7127,6 +7319,7 @@ impl<'de> serde::Deserialize<'de> for UpdateRootQuorumRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -7152,7 +7345,7 @@ impl<'de> serde::Deserialize<'de> for UpdateRootQuorumRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -7200,6 +7393,9 @@ impl<'de> serde::Deserialize<'de> for UpdateRootQuorumRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -7271,6 +7467,7 @@ impl<'de> serde::Deserialize<'de> for UpdateUserRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -7296,7 +7493,7 @@ impl<'de> serde::Deserialize<'de> for UpdateUserRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -7344,6 +7541,9 @@ impl<'de> serde::Deserialize<'de> for UpdateUserRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -7415,6 +7615,7 @@ impl<'de> serde::Deserialize<'de> for UpdateUserTagRequest {
             TimestampMs,
             OrganizationId,
             Parameters,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -7440,7 +7641,7 @@ impl<'de> serde::Deserialize<'de> for UpdateUserTagRequest {
                             "timestampMs" | "timestamp_ms" => Ok(GeneratedField::TimestampMs),
                             "organizationId" | "organization_id" => Ok(GeneratedField::OrganizationId),
                             "parameters" => Ok(GeneratedField::Parameters),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -7488,6 +7689,9 @@ impl<'de> serde::Deserialize<'de> for UpdateUserTagRequest {
                                 return Err(serde::de::Error::duplicate_field("parameters"));
                             }
                             parameters__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
@@ -7609,6 +7813,7 @@ impl<'de> serde::Deserialize<'de> for Vote {
             Signature,
             Scheme,
             CreatedAt,
+            __SkipField__,
         }
         impl<'de> serde::Deserialize<'de> for GeneratedField {
             fn deserialize<D>(deserializer: D) -> std::result::Result<GeneratedField, D::Error>
@@ -7640,7 +7845,7 @@ impl<'de> serde::Deserialize<'de> for Vote {
                             "signature" => Ok(GeneratedField::Signature),
                             "scheme" => Ok(GeneratedField::Scheme),
                             "createdAt" | "created_at" => Ok(GeneratedField::CreatedAt),
-                            _ => Err(serde::de::Error::unknown_field(value, FIELDS)),
+                            _ => Ok(GeneratedField::__SkipField__),
                         }
                     }
                 }
@@ -7730,6 +7935,9 @@ impl<'de> serde::Deserialize<'de> for Vote {
                                 return Err(serde::de::Error::duplicate_field("createdAt"));
                             }
                             created_at__ = map_.next_value()?;
+                        }
+                        GeneratedField::__SkipField__ => {
+                            let _ = map_.next_value::<serde::de::IgnoredAny>()?;
                         }
                     }
                 }
